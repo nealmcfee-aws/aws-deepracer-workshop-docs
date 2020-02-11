@@ -1,10 +1,10 @@
 languageCode = "en-us"
 ignoreFiles = [ "\\.files/README.md$",  ]
 defaultContentLanguage = "en"
-title = "Amazon RoboMaker Workshop"
+title = "AWS DeepRacer Workshop"
 theme = "learn"
 uglyurls = false
-googleAnalytics = "UA-44634850-4"
+googleAnalytics = ""
 sectionPagesMenu = "main"
 relativeURLs = true
 
@@ -16,7 +16,7 @@ editURL = "https://github.com/jerwallace/aws-robomaker-workshops/edit/master/con
 themeVariant = "mine"
 showVisitedLinks = false
 author = ""
-description = "Amazon RoboMaker Workshop"
+description = "AWS DeepRacer Workshop"
 disableSearch = false
 disableAssetsBusting = false
 disableLanguageSwitchingButton = true
