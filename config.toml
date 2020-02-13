@@ -13,7 +13,7 @@ hrefTargetBlank = true
 
 [params]
 editURL = "https://github.com/jerwallace/aws-robomaker-workshops/edit/master/content/"
-themeVariant = "mine"
+themeVariant = "deepracer"
 showVisitedLinks = false
 author = ""
 description = "AWS DeepRacer Workshop"
