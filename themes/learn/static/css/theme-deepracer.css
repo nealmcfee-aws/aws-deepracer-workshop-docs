@@ -10,9 +10,9 @@
     --MENU-HEADER-BG-color:#000; /* Background color of menu header */
     --MENU-HEADER-BORDER-color:#000; /*Color of menu header border */ 
 
-    --MENU-SEARCH-BG-color:#167ad0; /* Search field background color (by default borders + icons) */
-    --MENU-SEARCH-BOX-color: #33a1ff; /* Override search field border color */
-    --MENU-SEARCH-BOX-ICONS-color: #a1d2fd; /* Override search field icons color */
+    --MENU-SEARCH-BG-color:#fff; /* Search field background color (by default borders + icons) */
+    --MENU-SEARCH-BOX-color: #fff; /* Override search field border color */
+    --MENU-SEARCH-BOX-ICONS-color: #000; /* Override search field icons color */
 
     --MENU-SECTIONS-ACTIVE-BG-color:#232f3e; /* Background color of the active section and its childs */
     --MENU-SECTIONS-BG-color:#252c31; /* Background color of other sections */
