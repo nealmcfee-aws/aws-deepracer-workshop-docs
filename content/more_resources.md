@@ -3,12 +3,22 @@ title: "More Resources"
 disableToc: true
 ---
 
-Discover more AWS resources for building and running your robotics application on AWS:
+Discover more resources for AWS DeepRacer :
 
-#### More Workshops
+## Resources
 
-#### ROS Ecosystem and Tools
+Join the AWS DeepRacer Slack Community
 
-#### Courses
+AWS DeepRacer League
+
+AWS Training and Certification course called "AWS DeepRacer: Driven by Reinforcement Learning"
+
+AWS DeepRacer Forum
+
+AWS Developer Documentation
+
+## Developer Tools
+
+Log Analyzer and Visualizations
 
 
