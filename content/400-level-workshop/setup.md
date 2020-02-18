@@ -82,7 +82,7 @@ Select the region in the upper right corner of the AWS Console.
 ### Launch CloudFormation Stack 
 AWS CloudFormation provides a common language to describe and provision infrastructure resources in your cloud environment. CloudFormation allows you to use a simple text file to model and provision the resources needed for the workshop.  For this workshop, we've pre-created a template that simplifies some of the setup.  The infrastructure it creates is needed to run the activities.  
 
-Once you have successfully changed the AWS Region to US West (Oregon), click the button below to launch a CloudFormation stack to create the required resources:
+Once you have successfully changed the AWS Region to US West (Oregon), click the button below to launch a CloudFormation stack to create the required resources.
 
 [![Launch Stack](../../images/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://public-mcfeenea-sm-nb.s3.amazonaws.com/drnotebook.json&region=us-west-2)
 
