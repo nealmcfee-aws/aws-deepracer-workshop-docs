@@ -1,8 +1,8 @@
 ---
-title: "Activity #1: Open Source Rover"
+title: "Activity #1: Modify the AWS DeepRacer simapp"
 chapter: true
 weight: 5
-description: "In this activity you will setup a development environment and build, bundle, and simulate a Mars rover in an open world."
+description: "In this activity you will modify the simapp that AWS DeepRacer uses to create an AWS RoboMaker sim job."
 ---
 
 # Simulate a Open Source Rover

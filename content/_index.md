@@ -9,6 +9,3 @@ weight: 1
 Welcome AWS DeepRacers! 
 
 
-
-
-[Click here to get started!](/workshop)
