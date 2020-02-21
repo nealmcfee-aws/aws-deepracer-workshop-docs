@@ -7,13 +7,13 @@ description: "We create AWS RoboMaker simulation jobs that simulates the environ
 
 # Using multiple rollouts during training 
 
-## Set preset parameter
+### Set preset parameter
 
-## Increase number of workers to 2
+### Increase number of workers to 2
 
-## Create links to AWS RoboMaker jobs for visualization
+### Create links to AWS RoboMaker jobs for visualization
 
-## Run evaluation in parallel
+### Run evaluation in parallel
 
 
 

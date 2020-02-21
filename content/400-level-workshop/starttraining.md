@@ -7,17 +7,17 @@ description: "Train it!"
 
 # Train the RL model
 
-## Train the RL model using the Python SDK Script mode
+### Train the RL model using the Python SDK Script mode
 
-## Create the Kinesis video stream (optional)
+### Create the Kinesis video stream (optional)
 
-## Start the Robomaker job
+### Start the Robomaker job
 
-## Create Simulation Application
+### Create Simulation Application
 
-## Upload your customized simulation application to your s3 bucket
+### Upload your customized simulation application to your s3 bucket
 
-## Create arn for the AWS RoboMaker simulation application
+### Create arn for the AWS RoboMaker simulation application
 
 
 

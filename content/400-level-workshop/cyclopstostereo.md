@@ -7,7 +7,7 @@ description: "Explore the possible sensor combinations in the simulation applica
 
 # Modify the sensor combinations
 
-## To add configure stereo camera and LIDAR
+### To add configure stereo camera and LIDAR
 
 
 **[Proceed to account clean up](../cleanup/)**

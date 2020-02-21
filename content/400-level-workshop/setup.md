@@ -106,6 +106,10 @@ You will need the values for the following:
 
 - S3BucketName
 
+### Place to navigate to notebook and run first cell?
+### Place for docker?
+
+
 **Congratulations!** You have completed the setup portion of the workshop.
 
 **[Continue to the next module.](../marsrover/)**

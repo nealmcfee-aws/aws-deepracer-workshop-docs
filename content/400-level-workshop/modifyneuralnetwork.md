@@ -9,13 +9,13 @@ The neural network architecture typically includes an input embedder, middleware
 
 # Update Middleware
 
-## Configure the RL algorithm hyperparameters
+### Configure the RL algorithm hyperparameters
 
-## Configure the reward function
+### Configure the reward function
 
-## Configure the action space
+### Configure the action space
 
-## Copy custom files to S3 bucket so that Amazon SageMaker and AWS RoboMaker can pick them up
+### Copy custom files to S3 bucket so that Amazon SageMaker and AWS RoboMaker can pick them up
 
 
 
