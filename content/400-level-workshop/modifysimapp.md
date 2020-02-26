@@ -7,7 +7,7 @@ description: "You may be interested in changing tracks (adding a new track, or e
 
 ### Adding new tracks to your simulation application
 
-![Image](/static/images/400workshop/Changetracks.png)
+![Image](/images/400workshop/Changetracks.png)
 
 Racing tracks with various shapes and textures are included among the 3D assets build/simapp/bundle/opt/install/deepracer_simulation_environment/share/deepracer_simulation_environment.
 
