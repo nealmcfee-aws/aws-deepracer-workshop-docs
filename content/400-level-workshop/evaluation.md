@@ -13,4 +13,4 @@ description: ""
 
 
 
-**[Proceed to the next activity](../martiandetector/)**
+**[Proceed to the next activity](/content/400-level-workshop/cleanup.md)**

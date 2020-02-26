@@ -42,6 +42,8 @@ Once you have successfully signed into the AWS console, click the button below t
 
 [![Launch Stack](../../images/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://s3.amazonaws.com/assets.robomakerworkshops.com/cfn/bootstrap.rover.no-roles.cfn.yaml&region=us-west-2)
 
+https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://public-mcfeenea-sm-nb.s3.amazonaws.com/drnotebook.json&region=us-west-2
+
 1. On the *Create stack* page, accept the defaults and click **Next**.
 2. On the *Specify stack details* page, set *Stack name* to a value that will help you identify this stack, such as "reMARS-workshop".
 3. In the *Parameters* section, the networking configuration has been pre-populated.  Leave the default values.
@@ -112,7 +114,7 @@ You will need the values for the following:
 
 **Congratulations!** You have completed the setup portion of the workshop.
 
-**[Continue to the next module.](../marsrover/)**
+**[Continue to the next module.](/content/400-level-workshop/modifysimapp.md)**
 {{% /md %}}
 
 </div>
