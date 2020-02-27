@@ -11,7 +11,7 @@ The neural network architecture typically includes an input embedder, middleware
 
 Coach layer names
 
-![Image](/static/images/400workshop/coachnames.png)
+![Image](/images/400workshop/coachnames.png)
 
 Add another convolutional layer
 Add mode convolutions

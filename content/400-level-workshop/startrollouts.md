@@ -7,7 +7,7 @@ description: "We create AWS RoboMaker simulation jobs that simulates the environ
 
 # Using multiple rollouts during training 
 
-![Image](/static/images/400workshop/fourrollouts.png)
+![Image](/images/400workshop/fourrollouts.png)
 
 ### Set preset parameter
 

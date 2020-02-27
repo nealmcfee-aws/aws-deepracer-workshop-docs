@@ -25,7 +25,7 @@ However, when you add a second sensor you need to decide if you are concatenatin
 
 Note that each input has its own embedder pipeline. For example, converting the color image to 8 bit grayscale. You could add more steps into this embedder process.
 
-![Image](/static/images/400workshop/inputembedder.png)
+![Image](/images/400workshop/inputembedder.png)
 
 ### To add configure stereo camera and LIDAR
 
