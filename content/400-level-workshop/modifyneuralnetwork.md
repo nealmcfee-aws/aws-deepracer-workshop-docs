@@ -48,4 +48,4 @@ Action space and steering angles can be changed by modifying src/markov/actions/
 Very important, remember to copy the edited files from ./src/ back into S3 where SageMaker and RoboMaker will pick them up
 
 
-**[Proceed to the next activity](/content/400-level-workshop/starttraining.md)**
+**[Proceed to the next activity](../starttraining/)**

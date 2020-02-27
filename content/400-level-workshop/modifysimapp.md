@@ -85,4 +85,4 @@ macro.xacro contains the joints that the sensors are attached to and its angle.
 
 After making changes to the simulation application assets, re-bundle it using the Python file sim_app_bundler.py. We will upload the tar.gz file to the AWS RoboMaker arn later in the notebook.
 
-**[Proceed to the next activity](/content/400-level-workshop/cyclopstostereo.md)**
+**[Proceed to the next activity](../cyclopstostereo/)**

@@ -37,4 +37,4 @@ Blurb about running in parallel
 
 
 
-**[Proceed to the next activity](/content/400-level-workshop/evaluation.md)**
+**[Proceed to the next activity](../evaluation/)**

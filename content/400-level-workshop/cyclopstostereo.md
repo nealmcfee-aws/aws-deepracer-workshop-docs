@@ -40,4 +40,4 @@ self.observation_space = spaces.Dict({
 })
 the input header names for the neural network in src/markov/presets/preset.py and the neural network architecture which are described in the next section.
 
-**[Proceed to next step](/content/400-level-workshop/modifyneuralnetwork.md)**
+**[Proceed to next step](../modifyneuralnetwork/)**

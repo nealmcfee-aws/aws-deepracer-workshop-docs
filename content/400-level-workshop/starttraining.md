@@ -35,4 +35,4 @@ blurb about the ARN
 
 
 
-**[Proceed to the next activity](/content/400-level-workshop/startrollouts.md)**
+**[Proceed to the next activity](../startrollouts)**
