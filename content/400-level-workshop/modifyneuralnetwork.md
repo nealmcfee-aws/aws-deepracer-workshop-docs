@@ -29,7 +29,7 @@ The source code explanation of Conv2d is here
 
 Here are the default Coach layer presets
 
-![Image](/static/images/400workshop/coachlayerpresets.png)
+![Image](/images/400workshop/coachlayerpresets.png)
 
 ### Configure the RL algorithm hyperparameters
 

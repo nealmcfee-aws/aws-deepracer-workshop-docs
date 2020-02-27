@@ -17,7 +17,7 @@ Single camera + LIDAR
 Stereo Camera + LIDAR
 When you specify a new sensor configuration this inpacts the state data that will feed into the neural network.
 
-![Image](/static/images/400workshop/networkinput.png)
+![Image](/images/400workshop/networkinput.png)
 
 In specifying a single image, the process is straight forward, we take 160x120 pixel image and feed that as input.
 
