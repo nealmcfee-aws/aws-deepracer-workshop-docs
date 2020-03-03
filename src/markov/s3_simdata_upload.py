@@ -34,26 +34,14 @@ if node_type == SIMULATION_WORKER:
     import rospy
 
     class DeepRacerRacetrackSimTraceData():
-        __instance = None
-        @staticmethod
-        def getInstance():
-            """ Static access method. """
-            if DeepRacerRacetrackSimTraceData.__instance == None:
-               logger.info("simtrace_data: Instantiate singleton")
-               DeepRacerRacetrackSimTraceData("None", "None")
-            return DeepRacerRacetrackSimTraceData.__instance
         def __init__(self, s3_bucket, s3_key):
-            """ Virtually private constructor. """
-            if DeepRacerRacetrackSimTraceData.__instance != None:
-                logger.info ("simtrace-data: DeepRacerRacetrackSimTraceData - already instantiated, should not happen")
-            else:
-                logger.info("simtrace_data init")
-                DeepRacerRacetrackSimTraceData.__instance = self
-                self.data_state = SIMTRACE_DATA_UPLOAD_UNKNOWN_STATE
-                self.s3_bucket = s3_bucket
-                self.s3_object_key = s3_key
-                if s3_key != "None":
-                    self.setup_mutipart_upload()
+            logger.info("simtrace_data init")
+            DeepRacerRacetrackSimTraceData.__instance = self
+            self.data_state = SIMTRACE_DATA_UPLOAD_UNKNOWN_STATE
+            self.s3_bucket = s3_bucket
+            self.s3_object_key = s3_key
+            if s3_key != "None":
+                self.setup_mutipart_upload()
 
         def setup_mutipart_upload(self):
             logger.info("simtrace_data: setup_mutipart_upload to {}".format(self.s3_bucket, self.s3_object_key))
@@ -87,7 +75,7 @@ if node_type == SIMULATION_WORKER:
                     self.total_upload_size += sys.getsizeof(csvdata)
                     logger.debug ("csvdata={} size data={} csv={}".format(csvdata, sys.getsizeof(csvdata), sys.getsizeof(self.simtrace_csv_data.getvalue())))
                 except Exception as ex:
-                    utils.json_format_logger("Invalid SIM_TRACE data format , Exception={}. Job failed!".format(ex),
+                    utils.json_format_logger("Invalid SIM_TRACE data format , Exception={}.".format(ex),
                            **utils.build_system_error_dict(utils.SIMAPP_SIMULATION_WORKER_EXCEPTION, utils.SIMAPP_EVENT_ERROR_CODE_500))
                     traceback.print_exc()
                     utils.simapp_exit_gracefully()
