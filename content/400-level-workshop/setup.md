@@ -104,12 +104,22 @@ This will create:
 - an **S3 bucket** to store your AWS SageMaker notebook assets.
 
 The stack creation should only take a minute or two.  Once the status has changed to CREATE_COMPLETE, click on the stack's  **Outputs** tab. It will provide you with several Key/Value pairs that we will use later in the workshop.  Specifically, you should copy and paste several Key/Values to a notepad application.  This is not required, but be prepared to navigate back to the CloudFormation **Outputs** tab when you're asked for these values later.  
+
 You will need the values for the following:
 
 - S3BucketName
+- Notebook Name
 
-### Place to navigate to notebook and run first cell?
-### Place for docker?
+### Launch the Amazon SageMaker Notebook
+
+1. Launch a new web browser window and navigate to the SageMaker Notebook Instance by selecting Amazon Sagemaker in the Services drop down in the AWS Console
+
+2. In the left menu select Notebook Instances
+
+3. Verify the region in the AWS Console is US West (Oregon).
+
+4. Select Open Jupyter or Open JupyterLab.
+
 
 
 **Congratulations!** You have completed the setup portion of the workshop.
