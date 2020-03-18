@@ -14,7 +14,7 @@
             "Type": "AWS::SageMaker::NotebookInstance",
             "Properties": {
                 "InstanceType": "ml.t2.medium",
-                "DefaultCodeRepository": "https://github.com/aws-samples/aws-deepracer-workshops.git",
+                "DefaultCodeRepository": "https://github.com/nealmcfee-aws/aws-deepracer-workshop-docs.git",
                 "LifecycleConfigName": { "Fn::GetAtt" : [ "BasicNotebookInstanceLifecycleConfig", "NotebookInstanceLifecycleConfigName" ] },
                 "NotebookInstanceName": {
                     "Ref": "NotebookName"
