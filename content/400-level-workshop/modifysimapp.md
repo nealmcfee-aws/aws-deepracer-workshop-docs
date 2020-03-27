@@ -7,7 +7,7 @@ description: "You may be interested in changing tracks (adding a new track, or e
 ## Exercise X
 ### Move the sim app to the working folder
 
-
+<script src="https://gist.github.com/nealmcfee-aws/ec7dc385a61c6094fa0fd90b195e8c53.js"></script>
 
 ### Adding new tracks to your simulation application
 

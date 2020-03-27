@@ -5,7 +5,7 @@ weight: 1
 description: "We will start by provisioning an Amazon SageMaker notebook instance."
 ---
 
-<script src="https://gist.github.com/nealmcfee-aws/ec7dc385a61c6094fa0fd90b195e8c53.js"></script>
+
 
 # Workshop Setup
 
