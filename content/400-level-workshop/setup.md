@@ -5,8 +5,6 @@ weight: 1
 description: "We will start by provisioning an Amazon SageMaker notebook instance."
 ---
 
-
-
 # Workshop Setup
 
 Before we get started learning about robot development, we need to configure a few things.  This workshop can be completed in two ways:  at a public event where AWS provides temporary AWS accounts; or on your own, where you use your own AWS account.
