@@ -5,6 +5,8 @@ weight: 1
 description: "We will start by provisioning an Amazon SageMaker notebook instance."
 ---
 
+<script src="https://gist.github.com/nealmcfee-aws/ec7dc385a61c6094fa0fd90b195e8c53.js"></script>
+
 # Workshop Setup
 
 Before we get started learning about robot development, we need to configure a few things.  This workshop can be completed in two ways:  at a public event where AWS provides temporary AWS accounts; or on your own, where you use your own AWS account.
