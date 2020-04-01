@@ -7,7 +7,9 @@ description: "We have partnered with Intel and use Coach as reinforcement learni
 The neural network architecture typically includes an input embedder, middleware, and an output head, see descriptions here. In this section we are interested in changing the middleware."
 ---
 
-# Update Middleware
+# Update the neural network architecture
+
+### Update Middleware
 
 Coach layer names
 

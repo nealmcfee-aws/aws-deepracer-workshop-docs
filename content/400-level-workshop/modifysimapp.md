@@ -4,9 +4,14 @@ chapter: true
 weight: 5
 description: "You may be interested in changing tracks (adding a new track, or editing an existing one), adding objects to your track, or adding bot cars to train against."
 ---
-## Exercise X
+## Exercise 1
 ### Move the sim app to the working folder
+During setup you created an Amazon SageMaker Notebook Instance and downloaded the current simapp.
 
+In this exercise you will open the Jupyter Notebook and extract the simapp into the working folder.
+
+1. In the file browser window open the 400_deepracer_rl.ipynb notebook
+2. 
 
 ### Adding new tracks to your simulation application
 
