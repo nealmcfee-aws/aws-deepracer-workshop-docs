@@ -1,11 +1,11 @@
 ---
-title: "Workshop Clean-up"
+title: "Workshop clean-up"
 chapter: true
 weight: 35
 description: "At the end of the session, considering cleaning up the resources that were created.  AWS only charges for consumed resources."
 ---
 
-# Workshop cleanup
+# Workshop clean-up
 
 
 

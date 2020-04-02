@@ -9,7 +9,7 @@ The neural network architecture typically includes an input embedder, middleware
 
 # Update the neural network architecture
 
-### Update Middleware
+### Exercise 8 - Update Middleware
 
 Coach layer names
 
@@ -33,15 +33,15 @@ Here are the default Coach layer presets
 
 ![Image](/images/400workshop/coachlayerpresets.png)
 
-### Configure the RL algorithm hyperparameters
+### Exercise 9 - Configure the RL algorithm hyperparameters
 
 We use Clipped PPO (as provided by Coach) as our reinformcent learning algorithm to train our network. To edit the hyperparameters of the Clipped PPO RL agent, edit the preset file in src/markov/presets/. The configurable hyperparameters include learning_rate, neural network structure, batch_size, discount factor. These really are vital to getting good convergence, or none at all.
 
-### Configure the reward function
+### Exercise 10 - Configure the reward function
 
 To customize reward functions, modify reward_function in src/markov/rewards/. Note that the parameters exposed to the reward function are coded in the environment file. To create new variables for the reward function, edit the environment file, src/markov/environment/deepracer_racetrack_env.py.
 
-### Configure the action space
+### Exercise 11 - Configure the action space
 
 Action space and steering angles can be changed by modifying src/markov/actions/.json file. The default action space for our RL agent is discrete, therefore, the number of actions correspond to the number of output nodes of the policy network.
 
@@ -61,7 +61,7 @@ As an example, we provide a modified environment src/markov/environment/deeprace
 How to add noise to actions, i.e., steering and speed, for robustness?
 Adding noise to your actions also increases the robustness of your model to steady-state or tracking errors of the robocar controllers for steering and speed in the real world. Since we use discrete action, we need to add noise to their associated mappings in class DeepRacerRacetrackCustomActionSpaceEnv(DeepRacerRacetrackEnv): (see Lines ~575-579)
 
-### Copy custom files to S3 bucket so that Amazon SageMaker and AWS RoboMaker can pick them up
+### Exercise 12 - Copy custom files to S3 bucket so that Amazon SageMaker and AWS RoboMaker can pick them up
 
 Very important, remember to copy the edited files from ./src/ back into S3 where SageMaker and RoboMaker will pick them up..
 

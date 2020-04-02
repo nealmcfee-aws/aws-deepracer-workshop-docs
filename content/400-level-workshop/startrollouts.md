@@ -5,11 +5,15 @@ weight: 25
 description: "We create AWS RoboMaker simulation jobs that simulates the environment and shares this data with SageMaker for training. Each roll-out uses a central model to independently collect experience in the form of episodes, where each episode consist of (state, action, next state, reward) tuples"
 ---
 
-# Using multiple rollouts during training 
+# Create multiple Rollouts 
+
+We create AWS RoboMaker simulation jobs that simulates the environment and shares this data with SageMaker for training. Each roll-out uses a central model to independently collect experience in the form of episodes, where each episode consist of (state, action, next state, reward) tuples
 
 ![Image](/images/400workshop/fourrollouts.png)
 
-### Set preset parameter
+We use horizontal scaling where the neural network model files are synchronized between the Amazon Sagemaker training job and AWS RoboMaker simulation workers. Model sync behavior is coded in src/markov/training_worker.py
+
+### Exercise ## - Set preset parameter
 
 ````
 if graph_manager.agent_params.algorithm.distributed_coach_synchronization_type == 
@@ -23,15 +27,15 @@ agent_params.algorithm.distributed_coach_synchronization_type = DistributedCoach
 
 ````
 
-### Increase number of workers to 2
+### Exercise XX - Increase number of workers to 2
 
 Specify the number of roll-out workers using the num_simulation_workers parameter.
 
-### Create links to AWS RoboMaker jobs for visualization
+### Exercise XX - Create links to AWS RoboMaker jobs for visualization
 
 You can visit the RoboMaker console to visualize the simulations or run the following cell to generate the hyperlinks.
 
-### Run evaluation in parallel
+### Exercise XX - Run evaluation in parallel
 
 Blurb about running in parallel
 

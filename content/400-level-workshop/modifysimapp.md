@@ -1,19 +1,21 @@
 ---
-title: "Customizing the simulation track and objects"
+title: "Customize the simulation track and objects"
 chapter: true
 weight: 5
 description: "You may be interested in changing tracks (adding a new track, or editing an existing one), adding objects to your track, or adding bot cars to train against."
 ---
-## Exercise 1
-### Move the sim app to the working folder
+# Customize the simulation track and objects
+
+### Exercise 1 - move the sim app to the working folder
+
 During setup you created an Amazon SageMaker Notebook Instance and downloaded the current simapp.
 
 In this exercise you will open the Jupyter Notebook and extract the simapp into the working folder.
 
 1. In the file browser window open the 400_deepracer_rl.ipynb notebook
-2. 
+2. Run the cell titled "Exercise 1 - Move the sim app to the working folder"
 
-### Adding new tracks to your simulation application
+### Exercise 2 - Adding new tracks to your simulation application
 
 ![Image](/images/400workshop/Changetracks.png)
 
@@ -30,7 +32,7 @@ config, which point to the meshes and allows us to construct a completed model o
 worlds/myworld.world, which takes our track model and wraps it in a world file, complete with sky and orientation.
 routes/mytrack.npy, contains the waypoints of our track, outside border, center, and inside border, which our simulation will use to determine things such as is the agent on the track, and how much prrogress has been made etc.
 
-### Adding new objects (excluding bot car) on the track
+### Exercise 3 - Adding new objects (excluding bot car) on the track
 
 To add objects, you can use the following files:
 
@@ -46,7 +48,7 @@ worlds/myworld_with_objects.world, which takes our prior track assets and our ne
 ````
 To replace any object during training, make a note of the object name, e.g., box1, and in your environment file, import rospy library and set_model_state function.
 
-### Adding new bot cars
+### Exercise 4 - Adding new bot cars
 
 A bot car is simply another robocar without the neural network, hence, uses the same assets as the robocar in build/simapp/bundle/opt/install/deepracer_simulation_environment/share/deepracer_simulation_environment. The bot car uses the same functionality such as reset in build/simapp/bundle/opt/install/deepracer_simulation_environment/lib/deepracer_simulation_environment/car_node.py
 
@@ -55,7 +57,7 @@ To add, remove, or modify the speed and lane changing behavior bot cars, use fun
 class BotCarController defines the functionality for the bot car behavior, including which segments on the track to spawn the bot car. Note that learning passing around corners is difficult due to partial observability, hence, initially, you can train a model to pass only on the straight segments to reduce the training time.
 class DeepRacerRacetrackEnv(gym.Env) def __init__(self) is used to set the number of bot cars, their speed, and lane changning frequency.
 
-### Adding and configuring new sensors
+### Exercise 5 - Adding and configuring new sensors
 
 A new sensor such as camera or LIDAR with existing ROS plug-in can be added in directly in the Gazebo car asset files located in build/simapp/bundle/opt/install/deepracer_simulation_environment/share/deepracer_simulation_environment/urdf/
 
@@ -89,7 +91,7 @@ racecar.xacro contains the parameters to set the location of the LIDAR, similar 
 
 macro.xacro contains the joints that the sensors are attached to and its angle.
 
-### Preparing the AWS RoboMaker Bundle
+### Exercise 6 - Preparing the AWS RoboMaker Bundle
 
 After making changes to the simulation application assets, re-bundle it using the Python file sim_app_bundler.py. We will upload the tar.gz file to the AWS RoboMaker arn later in the notebook.
 

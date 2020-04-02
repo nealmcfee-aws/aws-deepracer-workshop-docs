@@ -27,7 +27,7 @@ Note that each input has its own embedder pipeline. For example, converting the 
 
 ![Image](/images/400workshop/inputembedder.png)
 
-### Configure stereo camera and LIDAR
+### Exercise 7 - Configure stereo camera and LIDAR
 
 
 
