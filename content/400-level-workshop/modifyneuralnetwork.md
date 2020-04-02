@@ -63,6 +63,6 @@ Adding noise to your actions also increases the robustness of your model to stea
 
 ### Copy custom files to S3 bucket so that Amazon SageMaker and AWS RoboMaker can pick them up
 
-Very important, remember to copy the edited files from ./src/ back into S3 where SageMaker and RoboMaker will pick them up.
+Very important, remember to copy the edited files from ./src/ back into S3 where SageMaker and RoboMaker will pick them up..
 
 **[Proceed to the next activity](../starttraining/)**
