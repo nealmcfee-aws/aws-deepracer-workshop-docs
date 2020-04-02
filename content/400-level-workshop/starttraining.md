@@ -15,8 +15,6 @@ description: "Train it!"
 
 ### Exercise XX - Build and push Docker image
 
-### Exercise XX - 
-
 ### Exercise XX - Train the RL model using the Python SDK Script mode
 
 Next, we define the following algorithm metrics that we want to capture from cloudwatch logs to monitor the training progress. These are algorithm specific parameters and might change for different algorithm. We use Clipped PPO for this example.
