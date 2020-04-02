@@ -45,9 +45,24 @@ To customize reward functions, modify reward_function in src/markov/rewards/. No
 
 Action space and steering angles can be changed by modifying src/markov/actions/.json file. The default action space for our RL agent is discrete, therefore, the number of actions correspond to the number of output nodes of the policy network.
 
+## Other interesting manipulations to take note of
+
+### Changing the training algorithm
+To change the RL agent algorithm, refer to the DQN example for AWS DeepRacer. There are multiple files that need to be editted including the preset file in src/markov/presets/.
+
+### Configure the environment file with custom simulation variables
+We use an environment file, src/markov/environment/deepracer_racetrack_env.py, which contains "step" and "reset" functions and ability to exchange messages with the Gazebo based AWS RoboMaker simulator. This environment file is shared between Amazon Sagemaker and AWS RoboMaker jobs. The environment variable - NODE_TYPE defines which node the code is running on. So, the expressions that have rospy dependencies are executed on RoboMaker only.
+
+How to add noise to observations?
+You can add noise to robocar camera observations by using OpenCV or other image editting packages available in Python. Note that these libraries need to be located in or copied to build/simapp/bundle/usr/local/lib/python3.5/dist-packages for the AWS RoboMaker to import them.
+
+As an example, we provide a modified environment src/markov/environment/deepracer_racetrack_env_cv2.py, to use cv2 and add Gaussian noise to robocar observations in def set_next_state(): (see Lines ~241-254)
+
+How to add noise to actions, i.e., steering and speed, for robustness?
+Adding noise to your actions also increases the robustness of your model to steady-state or tracking errors of the robocar controllers for steering and speed in the real world. Since we use discrete action, we need to add noise to their associated mappings in class DeepRacerRacetrackCustomActionSpaceEnv(DeepRacerRacetrackEnv): (see Lines ~575-579)
+
 ### Copy custom files to S3 bucket so that Amazon SageMaker and AWS RoboMaker can pick them up
 
-Very important, remember to copy the edited files from ./src/ back into S3 where SageMaker and RoboMaker will pick them up
-
+Very important, remember to copy the edited files from ./src/ back into S3 where SageMaker and RoboMaker will pick them up.
 
 **[Proceed to the next activity](../starttraining/)**

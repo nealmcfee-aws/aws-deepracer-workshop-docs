@@ -1,5 +1,5 @@
 ---
-title: "Go from single camera, to stereo camera and LIDAR"
+title: "Modify the sensor combinations"
 chapter: true
 weight: 10
 description: "Explore the possible sensor combinations in the simulation application."
@@ -27,7 +27,7 @@ Note that each input has its own embedder pipeline. For example, converting the 
 
 ![Image](/images/400workshop/inputembedder.png)
 
-### To add configure stereo camera and LIDAR
+### Configure stereo camera and LIDAR
 
 
 
