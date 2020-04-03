@@ -20,7 +20,8 @@ In this exercise you will open the Jupyter Notebook and extract the simapp into 
 ![Image](/images/400workshop/Changetracks.png)
 
 Racing tracks with various shapes and textures are included among the 3D assets: 
-```
+
+`
 build
 |-simapp
   |-bundle
@@ -29,7 +30,8 @@ build
         |-deepracer_simulation_environment
           |-share
             |-deepracer_simulation_environment
-```
+`
+
 To add a new track, you need to provide the following files:
 
 #### 3D assets
