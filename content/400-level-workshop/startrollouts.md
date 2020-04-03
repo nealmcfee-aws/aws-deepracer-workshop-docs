@@ -11,25 +11,29 @@ We create AWS RoboMaker simulation jobs that simulates the environment and share
 
 ![Image](/images/400workshop/fourrollouts.png)
 
-We use horizontal scaling where the neural network model files are synchronized between the Amazon Sagemaker training job and AWS RoboMaker simulation workers. Model sync behavior is coded in src/markov/training_worker.py
+We use horizontal scaling where the neural network model files are synchronized between the Amazon Sagemaker training job and AWS RoboMaker simulation workers. Model sync behavior is coded in 
+
+`src/markov/training_worker.py`
 
 ### Exercise ## - Set preset parameter
 
-````
+```python
 if graph_manager.agent_params.algorithm.distributed_coach_synchronization_type == 
             DistributedCoachSynchronizationType.SYNC:
     graph_manager.save_checkpoint()
 else:
     graph_manager.occasionally_save_checkpoint()
-To enable sync models to the s3 bucket for multiple rollouts, set the parameter in src/markov/presets/preset.py
+```
+To enable sync models to the s3 bucket for multiple rollouts, set the **agent_params.algorithm.distributed_coach_synchronization_type** parameter in
 
+`src/markov/presets/preset.py`
+```python
 agent_params.algorithm.distributed_coach_synchronization_type = DistributedCoachSynchronizationType.SYNC
-
-````
+```
 
 ### Exercise XX - Increase number of workers to 2
 
-Specify the number of roll-out workers using the num_simulation_workers parameter.
+Specify the number of roll-out workers using the **num_simulation_workers** parameter.
 
 ### Exercise XX - Create links to AWS RoboMaker jobs for visualization
 

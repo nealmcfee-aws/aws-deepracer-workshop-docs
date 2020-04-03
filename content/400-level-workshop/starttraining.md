@@ -33,7 +33,11 @@ Blurb about creating the simapp in AWS RoboMaker
 
 ### Exercise XX - Upload your customized simulation application to your s3 bucket
 
-The AWS DeepRacer bundle to be used by the AWS RoboMaker service is under build/output.tar.gz. Next, we need to upload the bundle to our S3 bucket and create an AWS RoboMaker Simulation Application.
+The AWS DeepRacer bundle to be used by the AWS RoboMaker service is under 
+```
+build/output.tar.gz
+```
+Next, we need to upload the bundle to our S3 bucket and create an AWS RoboMaker Simulation Application.
 
 
 

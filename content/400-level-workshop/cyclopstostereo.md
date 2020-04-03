@@ -31,13 +31,27 @@ Note that each input has its own embedder pipeline. For example, converting the 
 
 
 
-the observations to include the new sensors added in use function in src/markov/environments/deepracer_racetrack_env.py and use the below code segment in class DeepRacerRacetrackEnv(gym.Env) def __init__(self) to define the observation space with dictionary keys corresponding to the different type of sensors:
+the observations to include the new sensors added in use function in 
+
+`src/markov/environments/deepracer_racetrack_env.py`
+
+and use the below code segment in 
+```python
+class DeepRacerRacetrackEnv(gym.Env) def __init__(self) 
+```
+to define the observation space with dictionary keys corresponding to the different type of sensors:
+```
 self.observation_space = spaces.Dict({
       'STEREO_CAMERAS': spaces.Box(low=0, high=255,
                               shape=(TRAINING_IMAGE_SIZE[1], TRAINING_IMAGE_SIZE[0], 2),
                               dtype=np.uint8),
       'LIDAR': spaces.Box(low=0.15, high=1.0, shape=(64,))
 })
-the input header names for the neural network in src/markov/presets/preset.py and the neural network architecture which are described in the next section.
+```
+the input header names for the neural network in 
+
+`src/markov/presets/preset.py`
+
+ and the neural network architecture which are described in the next section.
 
 **[Proceed to the next activity](../modifyneuralnetwork/)**
