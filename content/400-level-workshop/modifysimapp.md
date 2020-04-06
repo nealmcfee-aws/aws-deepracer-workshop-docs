@@ -41,9 +41,9 @@ To add a new track, you need to provide the following files:
 meshes/mytrack/mytrack.dae
 `
 #### textures
-```
-meshes/mytrack/textures 
-``` 
+`
+meshes/mytrack/textures
+`
 
 Note: For the already existing tracks, we provide Blender files for modifications as needed.
 
@@ -74,16 +74,21 @@ contains the waypoints of our track, outside border, center, and inside border, 
 ### Exercise 3 - Adding new objects (excluding bot car) on the track
 
 To add objects, you can use the following files:
-```
+
+`
 models/racecar_box/model.sdf 
+`
+
+`
 models/racecar_box/model.config
-```
+`
 , contain model of a box object. 
 
 Any other Gazebo compatiable object can be added by creating a folder with these files under models folder.
-```
+
+`
 worlds/myworld_with_objects.world
-```
+`
 
 , which takes our prior track assets and our new object models. 
 
@@ -97,21 +102,31 @@ Any number of objects can be added by including the following lines in the world
     <name>box1</name>
   </include>
 ```
-To replace any object during training, make a note of the object name, e.g., box1, and in your environment file, import rospy library and set_model_state function.
+To replace any object during training, make a note of the object name, e.g., box1, and in your environment file, import **rospy** library and **set_model_state** function.
 
 ### Exercise 4 - Adding new bot cars
 
-A bot car is simply another robocar without the neural network, hence, uses the same assets as the robocar in 
-```
-build/simapp/bundle/opt/install/deepracer_simulation_environment/share/deepracer_simulation_environment
-```
-The bot car uses the same functionality such as reset in 
+A bot car is simply another robocar without the neural network.
 
-`build/simapp/bundle/opt/install/deepracer_simulation_environment/lib/deepracer_simulation_environment/car_node.py`
+The bot car uses the same functionality such as reset in `car_node.py`
+
+```bash
+build
+|-simapp
+  |-bundle
+    |-opt
+      |-install
+        |-deepracer_simulation_environment
+          |-lib
+            |-deepracer_simulation_environment
+```
+![Image](/images/400workshop/car_node.png)
 
 To add, remove, or modify the speed and lane changing behavior bot cars, use function in 
 
 `src/markov/environments/deepracer_racetrack_env.py`
+
+
 ```python
 class BotCarController 
 ```
@@ -124,20 +139,33 @@ is used to set the number of bot cars, their speed, and lane changning frequency
 ### Exercise 5 - Adding and configuring new sensors
 
 A new sensor such as camera or LIDAR with existing ROS plug-in can be added in directly in the Gazebo car asset files located in 
+
+```bash
+build
+|-simapp
+  |-bundle
+    |-opt
+      |-install
+        |-deepracer_simulation_environment
+          |-share
+            |-deepracer_simulation_environment
+              |-urdf
+```
 ```
 build/simapp/bundle/opt/install/deepracer_simulation_environment/share/deepracer_simulation_environment/urdf/
 ```
+
 To add another camera:
 
-racecar.gazebo in the original time-trial already includes a camera, to add another camerara you can replicate that code snippet with a new name. Alternatively, you can add a less to the existing camera.
+`racecar.gazebo` in the original time-trial already includes a camera, to add another camera you can replicate that code snippet with a new name. Alternatively, you can add a less to the existing camera.
 
-racecar.xacro contains the parameters to set the location of the cameras, see _leftcam and _rightcam.
+`racecar.xacro` contains the parameters to set the location of the cameras, see **_leftcam** and **_rightcam**.
 
-macro.xacro contains the joints that the sensors are attached to including cameras and lenses for the cameras. The angle of the camera lenses are adjusted in this file.
+`macro.xacro` contains the joints that the sensors are attached to including cameras and lenses for the cameras. The angle of the camera lenses are adjusted in this file.
 
 To add a LIDAR:
 
-racecar.gazebo uses a LIDAR plugin compatible with the LIDAR on the device, similar to the camera module. There are two parameters that can be customized for the LIDAR, scan and range. These parameters determine the angle bracket and range to detect light reflections. 
+`racecar.gazebo` uses a LIDAR plugin compatible with the LIDAR on the device, similar to the camera module. There are two parameters that can be customized for the LIDAR, scan and range. These parameters determine the angle bracket and range to detect light reflections. 
 The default settings below are for +/- 1.0472 radians (60 degrees) for the scanning angle and is between 0.15 and 0.5 meters for the observability range.
 ````
 <scan>
@@ -154,9 +182,9 @@ The default settings below are for +/- 1.0472 radians (60 degrees) for the scann
 <resolution>0.01</resolution>
 </range>
 ````
-racecar.xacro contains the parameters to set the location of the LIDAR, similar to the camera.
+`racecar.xacro` contains the parameters to set the location of the LIDAR, similar to the camera.
 
-macro.xacro contains the joints that the sensors are attached to and its angle.
+`macro.xacro` contains the joints that the sensors are attached to and its angle.
 
 ### Exercise 6 - Preparing the AWS RoboMaker Bundle
 
