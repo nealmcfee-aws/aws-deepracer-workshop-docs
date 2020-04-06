@@ -32,6 +32,8 @@ build
             |-deepracer_simulation_environment
 ```
 
+![Image](/images/400workshop/jupyterlabstartfilesystem.png)
+
 To add a new track, you need to provide the following files:
 
 #### 3D assets
