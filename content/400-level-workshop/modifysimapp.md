@@ -13,7 +13,9 @@ During setup you created an Amazon SageMaker Notebook Instance and downloaded th
 In this exercise you will open the Jupyter Notebook and extract the simapp into the working folder.
 
 1. In the file browser window open the `400_deepracer_rl.ipynb` notebook
-2. Run the cell titled "Exercise 1 - Move the sim app to the working folder"
+2. Select the kernel ""tensorflow 36""
+![Image](/images/400workshop/selectkernal.png)
+3. Run the cell titled "Exercise 1 - Move the sim app to the working folder"
 
 ### Exercise 2 - Adding new tracks to your simulation application
 
