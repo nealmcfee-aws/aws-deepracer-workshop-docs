@@ -76,11 +76,11 @@ contains the waypoints of our track, outside border, center, and inside border, 
 To add objects, you can use the following files:
 
 `
-models/racecar_box/model.sdf 
+models/box_obstacle/model.sdf 
 `
 
 `
-models/racecar_box/model.config
+models/box_obstacle/model.config
 `
 , contain model of a box object. 
 
@@ -98,7 +98,7 @@ Any number of objects can be added by including the following lines in the world
   <include>
     <pose>0 0 0 0 0 0</pose>
     <static>true</static>
-    <uri>model://models/racecar_box</uri>
+    <uri>model://models/box_obstacle</uri>
     <name>box1</name>
   </include>
 ```

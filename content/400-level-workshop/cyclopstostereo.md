@@ -15,13 +15,13 @@ Single camera
 Stereo camera
 Single camera + LIDAR
 Stereo Camera + LIDAR
-When you specify a new sensor configuration this inpacts the state data that will feed into the neural network.
+When you specify a new sensor configuration this impacts the state data that will feed into the neural network.
 
 ![Image](/images/400workshop/networkinput.png)
 
 In specifying a single image, the process is straight forward, we take 160x120 pixel image and feed that as input.
 
-However, when you add a second sensor you need to decide if you are concatenating the inputs before feeding them into the neural network, or if you are creating a second input (double headed so to speak).
+However, when you add a second sensor you need to decide if you are concatenating the inputs before feeding them into the neural network, or if you are creating a second input (double headed).
 
 Note that each input has its own embedder pipeline. For example, converting the color image to 8 bit grayscale. You could add more steps into this embedder process.
 
@@ -36,6 +36,7 @@ the observations to include the new sensors added in use function in
 `src/markov/environments/deepracer_racetrack_env.py`
 
 and use the below code segment in 
+
 ```python
 class DeepRacerRacetrackEnv(gym.Env) def __init__(self) 
 ```
@@ -43,8 +44,8 @@ to define the observation space with dictionary keys corresponding to the differ
 ```
 self.observation_space = spaces.Dict({
       'STEREO_CAMERAS': spaces.Box(low=0, high=255,
-                              shape=(TRAINING_IMAGE_SIZE[1], TRAINING_IMAGE_SIZE[0], 2),
-                              dtype=np.uint8),
+      shape=(TRAINING_IMAGE_SIZE[1], TRAINING_IMAGE_SIZE[0], 2),
+      dtype=np.uint8),
       'LIDAR': spaces.Box(low=0.15, high=1.0, shape=(64,))
 })
 ```
