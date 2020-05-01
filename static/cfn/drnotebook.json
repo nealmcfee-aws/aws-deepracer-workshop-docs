@@ -14,7 +14,6 @@
             "Type": "AWS::SageMaker::NotebookInstance",
             "Properties": {
                 "InstanceType": "ml.t2.medium",
-                "DefaultCodeRepository": "https://github.com/nealmcfee-aws/aws-deepracer-workshop-docs.git",
                 "LifecycleConfigName": { "Fn::GetAtt" : [ "BasicNotebookInstanceLifecycleConfig", "NotebookInstanceLifecycleConfigName" ] },
                 "NotebookInstanceName": {
                     "Ref": "NotebookName"
@@ -34,7 +33,7 @@
               "OnCreate": [
                 {
                   "Content": {
-                    "Fn::Base64": "aws s3 cp s3://deepracer-managed-resources-us-east-1/deepracer-simapp.tar.gz './home/ec2-user/SageMaker/'"
+                    "Fn::Base64": "mkdir -p -m777 './home/ec2-user/SageMaker/DeepRacer_400_Workshop/' && aws s3 cp s3://deepracer-managed-resources-us-east-1/deepracer-simapp.tar.gz './home/ec2-user/SageMaker/DeepRacer_400_Workshop/' && cp -r /home/ec2-user/sample-notebooks/reinforcement_learning/rl_deepracer_robomaker_coach_gazebo/* './home/ec2-user/SageMaker/DeepRacer_400_Workshop/'"
                   }
                 }
               ]
@@ -292,7 +291,8 @@
         "SecurityGroup": {
             "Type": "AWS::EC2::SecurityGroup",
             "Properties": {
-                "GroupDescription": "default VPC security group",
+                "GroupDescription": "400 Level DeepRacer Workshop VPC security group",
+                "GroupName": "deepracer-vpc-4323-341",
                 "VpcId": {
                     "Ref": "VPC"
                 },
