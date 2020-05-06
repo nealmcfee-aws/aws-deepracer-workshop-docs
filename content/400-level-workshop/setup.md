@@ -40,7 +40,7 @@ AWS CloudFormation provides a common language to describe and provision infrastr
 
 Once you have successfully signed into the AWS console, click the button below to launch a CloudFormation stack to create the required resources:
 
-[![Launch Stack](../../images/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://public-mcfeenea-sm-nb.s3.amazonaws.com/drnotebook.json&region=us-west-2)
+[![Launch Stack](../../images/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://public-mcfeenea-sm-nb.s3.amazonaws.com/drnotebook.json&region=us-east-1)
 
 
 1. On the *Create stack* page, accept the defaults and click **Next**.
@@ -98,7 +98,7 @@ AWS CloudFormation provides a common language to describe and provision infrastr
 
 Once you have successfully changed the AWS Region to US West (Oregon), click the button below to launch a CloudFormation stack to create the required resources.
 
-[![Launch Stack](../../images/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://public-mcfeenea-sm-nb.s3.amazonaws.com/drnotebook.json&region=us-west-2)
+[![Launch Stack](../../images/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://public-mcfeenea-sm-nb.s3.amazonaws.com/drnotebook.json&region=us-east-1)
 
 1. On the *Create stack* page, accept the defaults and click **Next**.
 2. On the *Specify stack details* page, set *Stack name* to a value that will help you identify this stack, such as "mcfeenea-deepracer-wrkshp-resources".
