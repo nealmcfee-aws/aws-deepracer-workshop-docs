@@ -33,7 +33,7 @@
               "OnCreate": [
                 {
                   "Content": {
-                    "Fn::Base64": "mkdir -p -m777 './home/ec2-user/SageMaker/DeepRacer_400_Workshop/' && aws s3 cp s3://deepracer-managed-resources-us-east-1/deepracer-simapp.tar.gz './home/ec2-user/SageMaker/DeepRacer_400_Workshop/' && cp -r /home/ec2-user/sample-notebooks/reinforcement_learning/rl_deepracer_robomaker_coach_gazebo/* './home/ec2-user/SageMaker/DeepRacer_400_Workshop/'"
+                    "Fn::Base64": "mkdir -p -m777 './home/ec2-user/SageMaker/DeepRacer_400_Workshop/' && aws s3 cp s3://deepracer-managed-resources-us-east-1/deepracer-simapp.tar.gz './home/ec2-user/SageMaker/DeepRacer_400_Workshop/' && cp -r /home/ec2-user/sample-notebooks/reinforcement_learning/rl_deepracer_robomaker_coach_gazebo/* './home/ec2-user/SageMaker/DeepRacer_400_Workshop/' && rm -f './home/ec2-user/SageMaker/DeepRacer_400_Workshop/deepracer_rl.ipynb'"
                   }
                 }
               ]
