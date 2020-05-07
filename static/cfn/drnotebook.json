@@ -132,7 +132,7 @@
         "PublicSubnet1": {
             "Type": "AWS::EC2::Subnet",
             "Properties": {
-                "AvailabilityZone": "us-east-1a",
+                "AvailabilityZone": "us-west-2a",
                 "CidrBlock": "10.0.0.0/24",
                 "VpcId": {
                     "Ref": "VPC"
@@ -142,7 +142,7 @@
         "PublicSubnet2": {
             "Type": "AWS::EC2::Subnet",
             "Properties": {
-                "AvailabilityZone": "us-east-1b",
+                "AvailabilityZone": "us-west-2b",
                 "CidrBlock": "10.0.1.0/24",
                 "VpcId": {
                     "Ref": "VPC"
@@ -152,7 +152,7 @@
         "PublicSubnet3": {
             "Type": "AWS::EC2::Subnet",
             "Properties": {
-                "AvailabilityZone": "us-east-1c",
+                "AvailabilityZone": "us-west-2c",
                 "CidrBlock": "10.0.2.0/24",
                 "VpcId": {
                     "Ref": "VPC"
@@ -162,7 +162,7 @@
         "PublicSubnet4": {
             "Type": "AWS::EC2::Subnet",
             "Properties": {
-                "AvailabilityZone": "us-east-1d",
+                "AvailabilityZone": "us-west-2d",
                 "CidrBlock": "10.0.3.0/24",
                 "VpcId": {
                     "Ref": "VPC"
