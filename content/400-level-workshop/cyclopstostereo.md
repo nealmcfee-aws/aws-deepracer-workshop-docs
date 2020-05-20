@@ -7,52 +7,45 @@ description: "Explore the possible sensor combinations in the simulation applica
 
 # Modify the sensor combinations
 
-Note that we have already added all the sensor combinations into the simulation application, and thus you only have to specify the preset that you want to use. Similarly, you can go add entirely new sensors into your simulation application, add them to the car model, and then use them during training. You will have to see what makes sense from a reward fucntion point of view.
+Note that we have already added all the sensor combinations into the simulation application, and thus you only have to specify the sensor that you want to use. 
 
-Possible sensors
+
+### Possible sensors
 
 Single camera
-Stereo camera
+
 Single camera + LIDAR
-Stereo Camera + LIDAR
+
+Stereo camera
+
+Stereo camera + LIDAR
+
 When you specify a new sensor configuration this impacts the state data that will feed into the neural network.
 
 ![Image](/images/400workshop/networkinput.png)
 
-In specifying a single image, the process is straight forward, we take 160x120 pixel image and feed that as input.
-
-However, when you add a second sensor you need to decide if you are concatenating the inputs before feeding them into the neural network, or if you are creating a second input (double headed).
-
-Note that each input has its own embedder pipeline. For example, converting the color image to 8 bit grayscale. You could add more steps into this embedder process.
 
 ![Image](/images/400workshop/inputembedder.png)
 
-### Exercise 7 - Configure stereo camera and LIDAR
+### Exercise 7 - Configure the sensor in the action space artifact file
+
+In the action space artifact file there is an entry for sensor.
+
+For the sensor you have the following choices:
+
+```"sensor": ["FRONT_FACING_CAMERA"]```
+
+```"sensor": ["FRONT_FACING_CAMERA", "LIDAR"]```
+
+```"sensor": ["STEREO_CAMERAS"]```
+
+```"sensor": ["STEREO_CAMERAS", "LIDAR"]```
 
 
 
-the observations to include the new sensors added in use function in 
+![Image](/images/400workshop/actionspaceexample.png)
 
-`src/markov/environments/deepracer_racetrack_env.py`
 
-and use the below code segment in 
-
-```python
-class DeepRacerRacetrackEnv(gym.Env) def __init__(self) 
-```
-to define the observation space with dictionary keys corresponding to the different type of sensors:
-```
-self.observation_space = spaces.Dict({
-      'STEREO_CAMERAS': spaces.Box(low=0, high=255,
-      shape=(TRAINING_IMAGE_SIZE[1], TRAINING_IMAGE_SIZE[0], 2),
-      dtype=np.uint8),
-      'LIDAR': spaces.Box(low=0.15, high=1.0, shape=(64,))
-})
-```
-the input header names for the neural network in 
-
-`src/markov/presets/preset.py`
-
- and the neural network architecture which are described in the next section.
+ ### Save your action space artifact file and move to the next activity to modify the neural network.
 
 **[Proceed to the next activity](../modifyneuralnetwork/)**
