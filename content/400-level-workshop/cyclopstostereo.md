@@ -60,6 +60,6 @@ For the sensor you have the following choices:
 
 Modify the action space artifact file you created in the previous exercise by adding the value for sensor.
 
-### Save your action space artifact file and move to the next activity to modify the neural network.
+### Save your action space artifact file and move to the next activity.
 
 **[Proceed to the next activity](../modifyneuralnetwork/)**

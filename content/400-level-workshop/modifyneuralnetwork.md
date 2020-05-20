@@ -9,9 +9,9 @@ The neural network architecture typically includes an input embedder, middleware
 
 # Update the neural network architecture
 
+We have partnered with Intel and use Coach as reinforcement learning framework. Furthermore, we are using Tensorflow as our deep learning framework. 
 
-
-Coach layer names
+The neural network architecture typically includes an input embedder, middleware, and an output head. In this section we are interested in changing the middleware.
 
 ### Network Design
 Each agent has at least one neural network, used as the function approximator, for choosing the actions. The network is designed in a modular way to allow reusability in different agents. 
@@ -25,43 +25,189 @@ This is the first stage of the network, meant to convert the input into a featur
 
 The type of Input Embedder that AWS DeepRacer uses is Convolutional neural network.
 
-#### FC middlewares 
+#### FC middleware
 The middleware gets the output of the input embedder, and processes it into a different representation domain, before sending it through the output head. The goal of the middleware is to enable processing the combined outputs of several input embedders, and pass them through some extra processing. This, for instance, might include an LSTM or just a plain simple FC layer.
 
 #### Action output
 The output head is used in order to predict the values required from the network. These might include action-values, state-values or a policy. As with the input embedders, it is possible to use several output heads in the same network. For example, the Actor Critic agent combines two heads - a policy head and a state-value head. In addition, the output heads defines the loss function according to the head type.
 
-
-
-![Image](/images/400workshop/coachlayerpresets.png)
-
-
+The default action space for our RL agent is discrete, therefore, the number of actions correspond to the number of output nodes of the policy network.
 
 
 ### Exercise  - Update Middleware
 
 Note that we have already added middleware combinations into the simulation application, and thus you only have to specify the middleware level that you want to use. 
 
-Neural Network values available:
+![Image](/images/400workshop/coachlayerpresets.png)
 
-`["DEEP_CONVOLUTIONAL_NETWORK_SHALLOW"]`
+
+
+The more information you collect the larger the neural network is.
+
+In the action space artifact file there is an entry for neural_network. 
+
+![Image](/images/400workshop/actionspaceexample.png)
+
+When updating the neural_network entry take into account the different combinations of sensors and network depth outlined below.
+
+Neural Network values available for use in your action space artifact file:
 
 `["DEEP_CONVOLUTIONAL_NETWORK"]`
 
+`["DEEP_CONVOLUTIONAL_NETWORK_SHALLOW"]`
+
+`["DEEP_CONVOLUTIONAL_NETWORK_DEEP"]`
 
 
+#### Front facing camera
+
+`"sensor": ["FRONT_FACING_CAMERA"]`
+`"neural_network": "DEEP_CONVOLUTIONAL_NETWORK"`
+
+This will create a network in the format:
+
+Conv2d(32,5,2)
+Conv2d(32,3,1)
+Conv2d(64,3,2)
+Conv2d(64,3,1)
+dense_layer(64)
+
+`"sensor": ["FRONT_FACING_CAMERA"]`
+`"neural_network": "DEEP_CONVOLUTIONAL_NETWORK_SHALLOW"`
+
+This will create a network in the format:
+
+Conv2d(32,8,4)
+Conv2d(64,4,2)
+Conv2d(64,3,1)
+
+`"sensor": ["FRONT_FACING_CAMERA"]`
+`"neural_network": "DEEP_CONVOLUTIONAL_NETWORK_DEEP"`
+
+This will create a network in the format:
+
+Conv2d(32,8,4)
+Conv2d(32,4,2)
+Conv2d(64,4,2)
+Conv2d(64,3,1)
+dense_layer(512)
+dense_layer(512)
+
+#### Front facing camera with Lidar
+
+`"sensor": ["FRONT_FACING_CAMERA", "LIDAR"]`
+`"neural_network": "DEEP_CONVOLUTIONAL_NETWORK"`
+
+This will create a network in the format:
+
+Conv2d(32,5,2)
+Conv2d(32,3,1)
+Conv2d(64,3,2)
+Conv2d(64,3,1)
+dense_layer(64)
+dense_layer(256)
+dense_layer(256)
+
+`"sensor": ["FRONT_FACING_CAMERA", "LIDAR"]`
+`"neural_network": "DEEP_CONVOLUTIONAL_NETWORK_SHALLOW"`
+
+This will create a network in the format:
+
+Conv2d(32,8,4)
+Conv2d(64,4,2)
+Conv2d(64,3,1)
+dense_layer(256)
+dense_layer(256)
+
+`"sensor": ["FRONT_FACING_CAMERA", "LIDAR"]`
+`"neural_network": "DEEP_CONVOLUTIONAL_NETWORK_DEEP"`
+
+This will create a network in the format:
+
+Conv2d(32,8,4)
+Conv2d(32,4,2)
+Conv2d(64,4,2)
+Conv2d(64,3,1)
+dense_layer(512)
+dense_layer(512)
+dense_layer(256)
+dense_layer(256)
+
+#### Stereo Cameras
+
+`"sensor": ["STEREO_CAMERAS"]`
+`"neural_network": "DEEP_CONVOLUTIONAL_NETWORK"`
+
+This will create a network in the format:
+
+Conv2d(32,3,1)
+Conv2d(64,3,2)
+Conv2d(64,3,1)
+Conv2d(128,3,2)
+Conv2d(128,3,1)
+
+`"sensor": ["STEREO_CAMERAS"]`
+`"neural_network": "DEEP_CONVOLUTIONAL_NETWORK_SHALLOW"`
+
+This will create a network in the format:
+
+Conv2d(32,8,4)
+Conv2d(64,4,2)
+Conv2d(64,3,1)
 
 
+`"sensor": ["STEREO_CAMERAS"]`
+`"neural_network": "DEEP_CONVOLUTIONAL_NETWORK_DEEP"`
+
+This will create a network in the format:
+
+Conv2d(32,3,1)
+Conv2d(64,3,2)
+Conv2d(64,3,1)
+Conv2d(128,3,2)
+Conv2d(128,3,1)
+
+#### Stereo Cameras with Lidar
+
+`"sensor": ["STEREO_CAMERAS", "LIDAR"]`
+`"neural_network": "DEEP_CONVOLUTIONAL_NETWORK"`
+
+This will create a network in the format:
+
+Conv2d(32,3,1)
+Conv2d(64,3,2)
+Conv2d(64,3,1)
+Conv2d(128,3,2)
+Conv2d(128,3,1)
+dense_layer(256)
+dense_layer(256)
+
+`"sensor": ["STEREO_CAMERAS", "LIDAR"]`
+`"neural_network": "DEEP_CONVOLUTIONAL_NETWORK_SHALLOW"`
+
+This will create a network in the format:
+
+Conv2d(32,8,4)
+Conv2d(64,4,2)
+Conv2d(64,3,1)
+dense_layer(256)
+dense_layer(256)
+
+`"sensor": ["STEREO_CAMERAS", "LIDAR"]`
+`"neural_network": "DEEP_CONVOLUTIONAL_NETWORK_DEEP"`
+
+This will create a network in the format:
+
+Conv2d(32,3,1)
+Conv2d(64,3,2)
+Conv2d(64,3,1)
+Conv2d(128,3,2)
+Conv2d(128,3,1)
+dense_layer(256)
+dense_layer(256)
 
 
-
-
-
-
-
-
-
-The default action space for our RL agent is discrete, therefore, the number of actions correspond to the number of output nodes of the policy network.
+### Save your action space artifact file and move to the next activity.
 
 
 ### Exercise 9 - Configure the RL algorithm hyperparameters  --- MOVE THIS TO TRAIN RL MODEL

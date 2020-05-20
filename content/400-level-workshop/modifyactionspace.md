@@ -49,7 +49,7 @@ The filename of each file specifies the sensors, the neural network, speed, and 
 ![Image](/images/400workshop/actionspaceexample.png)
 
 
-### Save your action space artifact file and move to the next activity to modify the sensors.
+### Save your action space artifact file and move to the next activity.
 
 
 
