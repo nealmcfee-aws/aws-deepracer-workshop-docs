@@ -41,7 +41,10 @@ For the sensor you have the following choices:
 
 `"sensor": ["STEREO_CAMERAS", "LIDAR"]`
 
+![Image](/images/400workshop/stereo-lidar.png)
 
+
+![Image](/images/400workshop/actionspaceexample.png)
 
  ### Save your action space artifact file and move to the next activity to modify the neural network.
 
