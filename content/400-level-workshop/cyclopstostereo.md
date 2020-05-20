@@ -22,12 +22,27 @@ Stereo camera + LIDAR
 
 When you specify a new sensor configuration this impacts the state data that will feed into the neural network.
 
+
+
 ![Image](/images/400workshop/networkinput.png)
 
+### Camera
+
+Single-lens 120-degree field of view camera capturing at 15fps. The images are converted into greyscale before being fed to the neural network.
+
+### Stereo camera
+
+Composed of two single-lens cameras, stereo camera can generate depth information of the objects in front of the agent and thus be used to detect and avoid obstacles on the track. The cameras capture images with the same resolution and frequency. Images from both cameras are converted into grey scale, stacked and then fed into the neural network.
 
 ![Image](/images/400workshop/inputembedder.png)
 
-### Exercise 7 - Configure the sensor in the action space artifact file
+### LIDAR sensor
+
+LIDAR is a light detection and ranging sensor. It scans its environment and provides inputs to the model to determine when to overtake another vehicle and beat it to the finish line. It provides continuous visibility of its surroundings and can see in all directions and always know its distances from objects or other vehicles on the track.
+
+
+
+### Exercise XX - Configure the sensor in the action space artifact file
 
 In the action space artifact file there is an entry for sensor.
 
@@ -43,7 +58,8 @@ For the sensor you have the following choices:
 
 `"sensor": ["STEREO_CAMERAS", "LIDAR"]`
 
+Modify the action space artifact file you created in the previous exercise by adding the value for sensor.
 
- ### Save your action space artifact file and move to the next activity to modify the neural network.
+### Save your action space artifact file and move to the next activity to modify the neural network.
 
 **[Proceed to the next activity](../modifyneuralnetwork/)**
