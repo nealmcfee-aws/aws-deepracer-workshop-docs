@@ -9,46 +9,71 @@ The neural network architecture typically includes an input embedder, middleware
 
 # Update the neural network architecture
 
-### Exercise 8 - Update Middleware
+### Exercise  - Update Middleware
 
 Coach layer names
 
 ![Image](/images/400workshop/coachnames.png)
 
-Add another convolutional layer
-Add mode convolutions
-Test drop out
-To change the neural network architecture, edit the preset file in 
-```
-src/markov/presets/
-```
-We provide two example preset files:
 
-The default neural network architecture
- 
-`src/markov/presets/default.py`
-
-, has an input embedder with a 3 layer Convolutional Neural Network (CNN).
-
-The attention neural network architecture, 
-
-`src/markov/presets/preset_attention_layer.py`
-
-provides an example on how to use custom layers.
-
-Example:
-```python
-agent_params.network_wrappers['main'].input_embedders_parameters['observation'].scheme = [Conv2d(32, 8, 4),Conv2d(64, 4, 2),Conv2dWithAttention(64, 3, 1, 256)]
-```
-In this example we have three convolutional layers on top of each other. The first one has 32 convolutional filters, a kernel size of 8x8, and a stride length of 4.
-
-The source code explanation of Conv2d is here
 
 Here are the default Coach layer presets
 
 ![Image](/images/400workshop/coachlayerpresets.png)
 
-### Exercise 9 - Configure the RL algorithm hyperparameters
+### Exercise  - Configure the action space, Sensors, and Neural Network
+
+Action space and steering angles can be changed by modifying files in the actions folder.
+
+There are several example files included in the actions folder for you to use.
+
+`DeepRacer_400_Workshop/src/artifacts/actions/`
+
+There are several example files that match a pattern.
+
+The filename specifies the sensors, the neural network, speed, and steering granularity of the action space.
+
+This example specifies the left camera, a deep neural network, one speed, and 5 steering levels.
+
+`front_deep_single_speed_5steering.json`
+
+This example specifies both cameras, a shallow neural network, one speed, and 5 steering levels.
+
+`stereo_shallow_single_speed_5steering.json`
+
+This example specifies both cameras, lidar, deep neural network, two speeds, and 5 steering levels.
+
+`stereo_lidar_deep_two_speed_5steering.json`
+
+You are able to create your own action space artifact file by following this json format.
+
+![Image](/images/400workshop/actionspaceexample.png)
+
+
+Step -- Create action space
+
+
+Step -- Sensors
+
+Sensor values available:
+
+["FRONT_FACING_CAMERA"]
+["STEREO_CAMERAS"]
+["FRONT_FACING_CAMERA, LIDAR"]
+["STEREO_CAMERAS", "LIDAR"]
+
+
+Step -- Neural Network
+
+Neural Network values available:
+
+["DEEP_CONVOLUTIONAL_NETWORK_SHALLOW"]
+["DEEP_CONVOLUTIONAL_NETWORK"]
+
+The default action space for our RL agent is discrete, therefore, the number of actions correspond to the number of output nodes of the policy network.
+
+
+### Exercise 9 - Configure the RL algorithm hyperparameters  --- MOVE THIS TO TRAIN RL MODEL
 
 We use Clipped PPO (as provided by Coach) as our reinformcent learning algorithm to train our network. 
 To edit the hyperparameters of the Clipped PPO RL agent, edit the preset file in 
@@ -68,13 +93,7 @@ To create new variables for the reward function, edit the environment file
 
 `src/markov/environment/deepracer_racetrack_env.py`
 
-### Exercise 11 - Configure the action space
 
-Action space and steering angles can be changed by modifying 
-
-`src/markov/actions/.json`
-
-The default action space for our RL agent is discrete, therefore, the number of actions correspond to the number of output nodes of the policy network.
 
 ## Other interesting manipulations to take note of
 

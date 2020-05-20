@@ -31,7 +31,7 @@ To enable sync models to the s3 bucket for multiple rollouts, set the **agent_pa
 agent_params.algorithm.distributed_coach_synchronization_type = DistributedCoachSynchronizationType.SYNC
 ```
 
-### Exercise XX - Increase number of workers to 2
+### Exercise XX - Increase number of workers to 2 or more
 
 Specify the number of roll-out workers using the **num_simulation_workers** parameter.
 
