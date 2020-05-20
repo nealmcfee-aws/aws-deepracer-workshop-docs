@@ -33,17 +33,14 @@ In the action space artifact file there is an entry for sensor.
 
 For the sensor you have the following choices:
 
-```"sensor": ["FRONT_FACING_CAMERA"]```
+`"sensor": ["FRONT_FACING_CAMERA"]`
 
-```"sensor": ["FRONT_FACING_CAMERA", "LIDAR"]```
+`"sensor": ["FRONT_FACING_CAMERA", "LIDAR"]`
 
-```"sensor": ["STEREO_CAMERAS"]```
+`"sensor": ["STEREO_CAMERAS"]`
 
-```"sensor": ["STEREO_CAMERAS", "LIDAR"]```
+`"sensor": ["STEREO_CAMERAS", "LIDAR"]`
 
-
-
-![Image](/images/400workshop/actionspaceexample.png)
 
 
  ### Save your action space artifact file and move to the next activity to modify the neural network.
