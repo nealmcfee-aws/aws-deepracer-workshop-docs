@@ -31,6 +31,8 @@ When you specify a new sensor configuration this impacts the state data that wil
 
 In the action space artifact file there is an entry for sensor.
 
+![Image](/images/400workshop/actionspaceexample.png)
+
 For the sensor you have the following choices:
 
 `"sensor": ["FRONT_FACING_CAMERA"]`
@@ -41,10 +43,6 @@ For the sensor you have the following choices:
 
 `"sensor": ["STEREO_CAMERAS", "LIDAR"]`
 
-![Image](/images/400workshop/stereo-lidar.png)
-
-
-![Image](/images/400workshop/actionspaceexample.png)
 
  ### Save your action space artifact file and move to the next activity to modify the neural network.
 
