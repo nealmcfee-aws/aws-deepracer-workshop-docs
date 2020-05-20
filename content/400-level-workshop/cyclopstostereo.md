@@ -1,7 +1,7 @@
 ---
 title: "Modify the sensor combinations"
 chapter: true
-weight: 10
+weight: 15
 description: "Explore the possible sensor combinations in the simulation application."
 ---
 

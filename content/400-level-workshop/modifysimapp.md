@@ -192,4 +192,4 @@ The default settings below are for +/- 1.0472 radians (60 degrees) for the scann
 
 After making changes to the simulation application assets, re-bundle it using the Python file `sim_app_bundler.py`. We will upload the tar.gz file to the AWS RoboMaker arn later in the notebook.
 
-**[Proceed to the next activity](../cyclopstostereo/)**
+**[Proceed to the next activity](../modifyactionspace/)**

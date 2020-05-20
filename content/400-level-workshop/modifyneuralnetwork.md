@@ -1,7 +1,7 @@
 ---
 title: "Update the neural network architecture"
 chapter: true
-weight: 15
+weight: 20
 description: "We have partnered with Intel and use Coach as reinforcement learning framework. Furthermore, we are using Tensorflow as our deep learning framework.
 
 The neural network architecture typically includes an input embedder, middleware, and an output head, see descriptions here. In this section we are interested in changing the middleware."
@@ -21,36 +21,8 @@ Here are the default Coach layer presets
 
 ![Image](/images/400workshop/coachlayerpresets.png)
 
-### Exercise  - Configure the action space, Sensors, and Neural Network
+### Exercise  - Configure the Neural Network
 
-Action space and steering angles can be changed by modifying files in the actions folder.
-
-There are several example files included in the actions folder for you to use.
-
-`DeepRacer_400_Workshop/src/artifacts/actions/`
-
-There are several example files that match a pattern.
-
-The filename specifies the sensors, the neural network, speed, and steering granularity of the action space.
-
-This example specifies the left camera, a deep neural network, one speed, and 5 steering levels.
-
-`front_deep_single_speed_5steering.json`
-
-This example specifies both cameras, a shallow neural network, one speed, and 5 steering levels.
-
-`stereo_shallow_single_speed_5steering.json`
-
-This example specifies both cameras, lidar, deep neural network, two speeds, and 5 steering levels.
-
-`stereo_lidar_deep_two_speed_5steering.json`
-
-You are able to create your own action space artifact file by following this json format.
-
-![Image](/images/400workshop/actionspaceexample.png)
-
-
-Step -- Create action space
 
 
 Step -- Sensors

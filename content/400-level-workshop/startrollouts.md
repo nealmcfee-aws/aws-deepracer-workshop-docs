@@ -1,7 +1,7 @@
 ---
 title: "Create multiple Rollouts"
 chapter: true
-weight: 25
+weight: 30
 description: "We create AWS RoboMaker simulation jobs that simulates the environment and shares this data with SageMaker for training. Each roll-out uses a central model to independently collect experience in the form of episodes, where each episode consist of (state, action, next state, reward) tuples"
 ---
 
