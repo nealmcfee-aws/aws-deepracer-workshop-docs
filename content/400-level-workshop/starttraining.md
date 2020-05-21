@@ -5,6 +5,76 @@ weight: 25
 description: "Train it!"
 ---
 
+### Exercise 9 - Configure the RL algorithm hyperparameters  --- MOVE THIS TO TRAIN RL MODEL
+
+We use Clipped PPO (as provided by Coach) as our reinformcent learning algorithm to train our network. 
+To edit the hyperparameters of the Clipped PPO RL agent, edit the preset file in 
+```
+src/markov/presets/
+```
+ The configurable hyperparameters include learning_rate, neural network structure, batch_size, discount factor. These really are vital to getting good convergence, or none at all.
+
+### Exercise 10 - Configure the reward function
+
+To customize reward functions, modify reward_function in 
+```
+src/markov/rewards/ 
+```
+Note that the parameters exposed to the reward function are coded in the environment file. 
+To create new variables for the reward function, edit the environment file
+
+`src/markov/environment/deepracer_racetrack_env.py`
+
+
+
+## Other interesting manipulations to take note of
+
+### Changing the training algorithm
+To change the RL agent algorithm, refer to the DQN example for AWS DeepRacer. There are multiple files that need to be editted including the preset file in 
+```
+src/markov/presets/
+```
+### Configure the environment file with custom simulation variables
+We use an environment file, 
+
+`src/markov/environment/deepracer_racetrack_env.py` 
+
+which contains "step" and "reset" functions and ability to exchange messages with the Gazebo based AWS RoboMaker simulator. This environment file is shared between Amazon Sagemaker and AWS RoboMaker jobs. 
+The environment variable - NODE_TYPE defines which node the code is running on. So, the expressions that have rospy dependencies are executed on RoboMaker only.
+
+How to add noise to observations?
+You can add noise to robocar camera observations by using OpenCV or other image editing packages available in Python. Note that these libraries need to be located in or copied to 
+```
+build/simapp/bundle/usr/local/lib/python3.5/dist-packages 
+```
+for AWS RoboMaker to import them.
+
+As an example, we provide a modified environment 
+
+`src/markov/environment/deepracer_racetrack_env_cv2.py`
+
+, to use cv2 and add Gaussian noise to robocar observations in 
+```python 
+def set_next_state()
+```
+: (see Lines ~241-254)
+
+How to add noise to actions, i.e., steering and speed, for robustness?
+Adding noise to your actions also increases the robustness of your model to steady-state or tracking errors of the robocar controllers for steering and speed in the real world. Since we use discrete action, we need to add noise to their associated mappings in 
+```python
+class DeepRacerRacetrackCustomActionSpaceEnv(DeepRacerRacetrackEnv)
+```
+: (see Lines ~575-579)
+
+### Exercise 12 - Copy custom files to S3 bucket so that Amazon SageMaker and AWS RoboMaker can pick them up
+
+Very important, remember to copy the edited files from 
+```
+./src/ 
+```
+back into S3 where SageMaker and RoboMaker will pick them up..
+
+
 # Train the RL model
 
 ### Exercise XX - Notebook Imports
