@@ -2,7 +2,7 @@
 title: "Modify the action space"
 chapter: true
 weight: 10
-description: "Explore the possible steering angle and speed combinations."
+description: "Explore the possible steering angle and speed combinations and create your own action space or re-use one of the examples."
 ---
 
 
@@ -10,7 +10,7 @@ description: "Explore the possible steering angle and speed combinations."
 
 # Modify the action space
 
-Configure your vehicle's action space to define by setting the range and granularity for steering angle and speed.
+Action space defines the specific actions an agent can take in both the simulator and physical world. While a real vehicle can choose from a continuum of actions, AWS DeepRacer simplifies the agent's decision-making process by reducing that space to a set of discrete actions.
 
 ## Steering angle
 The steering angle determines the range of steering angles in which the front wheels of your agent can turn. For the agent to be able to make bigger turns, set a higher steering angle. However, too high a steering angle can empower the agent to make unnecessarily excessive turns and can cause zig-zagging.
