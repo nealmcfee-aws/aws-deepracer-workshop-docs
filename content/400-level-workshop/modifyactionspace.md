@@ -26,9 +26,12 @@ Action space and steering angles can be changed by modifying files in the action
 
 There are several example files included in the actions folder for you to use.
 
+Use the file browser tab in Jupyter Lab to navigate to the following folder.
+
 
 `DeepRacer_400_Workshop/src/artifacts/actions/`
 
+In the actions folder you will see several example files.
 
 The filename of each file specifies the sensors, the neural network, speed, and steering granularity of the action space.
 

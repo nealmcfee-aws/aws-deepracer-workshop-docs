@@ -15,7 +15,7 @@ In general, you design your reward function to act like an incentive plan. You c
 
 ![Image](/images/400workshop/rewardfunctionfiles.png)
 
-There are several example reward functions for you to modify.
+There are several example reward functions for you to get started from.
 
 
 #### Follow the Center Line in Time Trials ####
@@ -38,9 +38,9 @@ This example incentivizes the agent to follow the center line but penalizes with
 
 This reward function rewards the agent to stay between the track borders and penalizes the agent for getting too close to the next object in the front. The agent can move from lane to lane to avoid crashes. The total reward is a weighted sum of the reward and penalty. The example gives more weight to the penalty term to focus more on safety by avoiding crashes. You can play with different averaging weights to train the agent with different driving behaviors and to achieve different driving performances.
 
-[Additional information](https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-reward-function-examples.html)
 
-## Create the reward function
+
+## Create your own reward function (optional)
 
 
 If you wish to create your own reward function there is a pattern to the function that you must use.
@@ -60,15 +60,14 @@ The reward function input parameters (params) are passed in as a dictionary obje
 
 **NOTE**
 
-Since you are using a Jupyter Notebook in an Amazon SageMaker Notebook Instance you can import modules to create robust reward functions.
+Since you are using a Jupyter Notebook in an Amazon SageMaker Notebook Instance you can import modules to create robust reward functions or add functionality to the examples.
 
 ---
 
 
-## Save your reward function artifact file and move to the next activity.
-
 
 ### move to jupyter notebook and do the save into s3
 
+### Save your reward function artifact file and move to the next activity.
 
 **[Proceed to the next activity](../starttraining/)**
