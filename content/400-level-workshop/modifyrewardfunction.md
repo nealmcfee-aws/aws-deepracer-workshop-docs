@@ -68,6 +68,6 @@ Since you are using a Jupyter Notebook in an Amazon SageMaker Notebook Instance 
 
 ### move to jupyter notebook and do the save into s3
 
-### Save your reward function artifact file and move to the next activity.
+### Save your reward function artifact file and move to the next activity. 
 
 **[Proceed to the next activity](../starttraining/)**
