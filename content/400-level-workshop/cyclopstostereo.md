@@ -10,15 +10,15 @@ description: "Explore the possible sensor combinations in the simulation applica
 Note that we have already added all the sensor combinations into the simulation application, and thus you only have to specify the sensor that you want to use. 
 
 
-### Possible sensors
+### Possible sensor configuration
 
 Single camera
 
 Single camera + LIDAR
 
-Stereo camera
+Stereo cameras
 
-Stereo camera + LIDAR
+Stereo cameras + LIDAR
 
 When you specify a new sensor configuration this impacts the state data that will feed into the neural network.
 
@@ -30,7 +30,7 @@ When you specify a new sensor configuration this impacts the state data that wil
 
 Single-lens 120-degree field of view camera capturing at 15fps. The images are converted into greyscale before being fed to the neural network.
 
-### Stereo camera
+### Stereo cameras
 
 Composed of two single-lens cameras, stereo camera can generate depth information of the objects in front of the agent and thus be used to detect and avoid obstacles on the track. The cameras capture images with the same resolution and frequency. Images from both cameras are converted into grey scale, stacked and then fed into the neural network.
 

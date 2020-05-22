@@ -276,4 +276,4 @@ dense_layer(256)
 
 
 
-**[Proceed to the next activity](../starttraining/)**
+**[Proceed to the next activity](../modifyrewardfunction/)**
