@@ -1,7 +1,7 @@
 ---
 title: "Train the RL Model"
 chapter: true
-weight: 25
+weight: 30
 description: "Train it!"
 ---
 
