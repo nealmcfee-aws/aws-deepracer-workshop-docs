@@ -22,7 +22,7 @@ In this exercise you will open the Jupyter Notebook and extract the simapp into 
 ![Image](/images/400workshop/Changetracks.png)
 
 Racing tracks with various shapes and textures are included among the 3D assets: 
-
+   
 ```bash
 build
 |-simapp
