@@ -13,10 +13,12 @@ description: "Explore the possible steering angle and speed combinations."
 Configure your vehicle's action space to define by setting the range and granularity for steering angle and speed.
 
 ## Steering angle
-The steering angle granularity determines the number of directions your agent can steer. Increasing this will empower the agent to exercise finer control, but the larger action space will also increase the time it takes to train your model.
+The steering angle determines the range of steering angles in which the front wheels of your agent can turn. For the agent to be able to make bigger turns, set a higher steering angle. However, too high a steering angle can empower the agent to make unnecessarily excessive turns and can cause zig-zagging.
+
  
 ## Speed
-The speed granularity determines the number of speeds in which your agent can drive. Increasing this will empower the agent to exercise finer control, but the larger action space will also increase the time it takes to train your model.
+The speed determines how fast your agent can drive. For the agent to be able to drive faster, set a higher speed. However, on a given track, you must balance the desire for speed against the concern for keeping the agent on the track while it maneuvers curves at a high speed.
+
 
 ![Image](/images/400workshop/actionspace.png)
 
