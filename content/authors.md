@@ -7,7 +7,6 @@ disableToc: true
 
 Neal McFee
 Sahika Genc
-Sunil Mallya
 
 
 <!---

@@ -4,7 +4,7 @@ defaultContentLanguage = "en"
 title = "AWS DeepRacer Workshop"
 theme = "learn"
 uglyurls = false
-googleAnalytics = ""
+googleAnalytics = "UA-167412439-1"
 sectionPagesMenu = "main"
 relativeURLs = true
 
@@ -24,7 +24,7 @@ disableShortcutsTitle=false
 disableInlineCopyToClipBoard = true
 ghrepo = "https://github.com/jerwallace/aws-robomaker-workshops/"
 branch = "master"
-template_bucket = "robomakerworkshop.com"
+template_bucket = "neuralmotors.com"
 
 
 
@@ -50,12 +50,12 @@ weight = 20
 
 [[menu.shortcuts]]
 name = "<i class='fab fa-github'></i> GitHub Project"
-url = "https://github.com/jerwallace/aws-robomaker-workshops"
+url = "https://github.com/mcfeenea/changeme"
 weight = 30
 
 [[menu.shortcuts]]
 name = "<i class='fas fa-envelope'></i> Have questions?"
-url = "mailto:robomaker-workshops@amazon.com"
+url = "mailto:mcfeenea@amazon.com"
 weight = 40
 
 
