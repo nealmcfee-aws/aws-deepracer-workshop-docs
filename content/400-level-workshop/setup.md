@@ -65,7 +65,7 @@ You will need the values for the following:
 - S3BucketName
 - Notebook Name
 
-### Launch the Amazon SageMaker Notebook and complete the Workshop Setup section
+### Launch the Amazon SageMaker Notebook
 
 1. Launch a new web browser window and navigate to the SageMaker Notebook Instance by selecting Amazon Sagemaker in the Services drop down in the AWS Console
 
@@ -74,11 +74,6 @@ You will need the values for the following:
 3. Verify the region in the AWS Console is US East (N. Virginia).
 
 4. Select Open Jupyter or Open JupyterLab.
-
-5. If the kernel does not auto-populate then select conda_amazonei_tensorflow_p36.
-
-6. Execute all of the cells in the **Section: Workshop Setup**
-
 
 
 
@@ -127,7 +122,7 @@ You will need the values for the following:
 - S3BucketName
 - Notebook Name
 
-### Launch the Amazon SageMaker Notebook and complete the Workshop Setup section
+### Launch the Amazon SageMaker Notebook
 
 1. Launch a new web browser window and navigate to the SageMaker Notebook Instance by selecting Amazon Sagemaker in the Services drop down in the AWS Console
 
@@ -137,9 +132,6 @@ You will need the values for the following:
 
 4. Select Open Jupyter or Open JupyterLab.
 
-5. If the kernel does not auto-populate then select conda_amazonei_tensorflow_p36.
-
-6. Execute all of the cells in the **Section: Workshop Setup**
 
 
 **Congratulations!** You have completed the setup portion of the workshop.
