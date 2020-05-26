@@ -27,7 +27,6 @@ To create new variables for the reward function, edit the environment file
 
 
 
-<<<<<<< HEAD
 ---
 
 **NOTE**
@@ -38,19 +37,6 @@ Please refrain from modifications unless in advanced scenarios.
 ![Image](/images/400workshop/hyperparamsdonotedit.png)
  
 ---
-=======
-## Other interesting manipulations to take note of
-
-### Changing the training algorithm
-To change the RL agent algorithm, refer to the DQN example for AWS DeepRacer. There are multiple files that need to be editted including the preset file in 
-```
-src/markov/presets/
-```
-### Configure the environment file with custom simulation variables
-We use an environment file, 
-
-`src/markov/environment/deepracer_racetrack_env.py` 
->>>>>>> parent of e7d7f0e... hyperparamimage
 
 which contains "step" and "reset" functions and ability to exchange messages with the Gazebo based AWS RoboMaker simulator. This environment file is shared between Amazon Sagemaker and AWS RoboMaker jobs. 
 The environment variable - NODE_TYPE defines which node the code is running on. So, the expressions that have rospy dependencies are executed on RoboMaker only.
