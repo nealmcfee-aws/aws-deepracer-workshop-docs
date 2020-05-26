@@ -22,12 +22,7 @@ The hyperparameters that you can modify are
 The following hyperparameters are for file references and may cause your code to not work.
 Please refrain from modifications unless in advanced scenarios.
 
-hyperparameters={
-                            "s3_bucket": s3_bucket,
-                            "s3_prefix": s3_prefix,
-                            "aws_region": aws_region,
-                            "model_metadata_s3_key": "%s/model/model_metadata.json" % s3_prefix,
-                            "reward_function_s3_source": "%s/customer_reward_function.py" % s3_prefix,
+![Image](/images/400workshop/hyperparamsdonotedit.png)
  
 ---
 
