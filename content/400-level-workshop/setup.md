@@ -144,7 +144,7 @@ You will need the values for the following:
 
 **Congratulations!** You have completed the setup portion of the workshop.
 
-**[Continue to the next module.](../modifysimapp/)**
+**[Continue to the next module.](../modifyactionspace/)**
 {{% /md %}}
 
 </div>
