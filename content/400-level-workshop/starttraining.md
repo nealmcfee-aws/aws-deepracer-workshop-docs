@@ -15,27 +15,21 @@ The hyperparameters that you can modify are
 ![Image](/images/400workshop/hyperparams.png)
 
 
+---
+
+**NOTE**
+
+The following hyperparameters are for file references and may cause your code to not work.
+Please refrain from modifications unless in advanced scenarios.
+
 hyperparameters={
                             "s3_bucket": s3_bucket,
                             "s3_prefix": s3_prefix,
                             "aws_region": aws_region,
                             "model_metadata_s3_key": "%s/model/model_metadata.json" % s3_prefix,
                             "reward_function_s3_source": "%s/customer_reward_function.py" % s3_prefix,
-                            "batch_size": "64",
-                            "num_epochs": "10",
-                            "stack_size": "1",
-                            "lr": "0.0003",
-                            "exploration_type": "Categorical",
-                            "e_greedy_value": "1",
-                            "epsilon_steps": "10000",
-                            "beta_entropy": "0.01",
-                            "discount_factor": "0.999",
-                            "loss_type": "Huber",
-                            "num_episodes_between_training": "20",
-                            "max_sample_count": "0",
-                            "sampling_frequency": "1"
  
-
+---
 
 
 
