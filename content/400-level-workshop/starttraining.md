@@ -8,80 +8,40 @@ description: "Train it!"
 ### Exercise 9 - Configure the RL algorithm hyperparameters  --- MOVE THIS TO TRAIN RL MODEL
 
 We use Clipped PPO (as provided by Coach) as our reinformcent learning algorithm to train our network. 
-To edit the hyperparameters of the Clipped PPO RL agent, edit the preset file in 
-```
-src/markov/presets/
-```
- The configurable hyperparameters include learning_rate, neural network structure, batch_size, discount factor. These really are vital to getting good convergence, or none at all.
+To edit the hyperparameters of the Clipped PPO RL agent edit the cell in the Jupyter Notebook.
 
-### Exercise 10 - Configure the reward function
+The hyperparameters that you can modify are 
 
-To customize reward functions, modify reward_function in 
-```
-src/markov/rewards/ 
-```
-Note that the parameters exposed to the reward function are coded in the environment file. 
-To create new variables for the reward function, edit the environment file
-
-`src/markov/environment/deepracer_racetrack_env.py`
+![Image](/images/400workshop/hyperparams.png)
 
 
+hyperparameters={
+                            "s3_bucket": s3_bucket,
+                            "s3_prefix": s3_prefix,
+                            "aws_region": aws_region,
+                            "model_metadata_s3_key": "%s/model/model_metadata.json" % s3_prefix,
+                            "reward_function_s3_source": "%s/customer_reward_function.py" % s3_prefix,
+                            "batch_size": "64",
+                            "num_epochs": "10",
+                            "stack_size": "1",
+                            "lr": "0.0003",
+                            "exploration_type": "Categorical",
+                            "e_greedy_value": "1",
+                            "epsilon_steps": "10000",
+                            "beta_entropy": "0.01",
+                            "discount_factor": "0.999",
+                            "loss_type": "Huber",
+                            "num_episodes_between_training": "20",
+                            "max_sample_count": "0",
+                            "sampling_frequency": "1"
+ 
 
-## Other interesting manipulations to take note of
 
-### Changing the training algorithm
-To change the RL agent algorithm, refer to the DQN example for AWS DeepRacer. There are multiple files that need to be editted including the preset file in 
-```
-src/markov/presets/
-```
-### Configure the environment file with custom simulation variables
-We use an environment file, 
-
-`src/markov/environment/deepracer_racetrack_env.py` 
-
-which contains "step" and "reset" functions and ability to exchange messages with the Gazebo based AWS RoboMaker simulator. This environment file is shared between Amazon Sagemaker and AWS RoboMaker jobs. 
-The environment variable - NODE_TYPE defines which node the code is running on. So, the expressions that have rospy dependencies are executed on RoboMaker only.
-
-How to add noise to observations?
-You can add noise to robocar camera observations by using OpenCV or other image editing packages available in Python. Note that these libraries need to be located in or copied to 
-```
-build/simapp/bundle/usr/local/lib/python3.5/dist-packages 
-```
-for AWS RoboMaker to import them.
-
-As an example, we provide a modified environment 
-
-`src/markov/environment/deepracer_racetrack_env_cv2.py`
-
-, to use cv2 and add Gaussian noise to robocar observations in 
-```python 
-def set_next_state()
-```
-: (see Lines ~241-254)
-
-How to add noise to actions, i.e., steering and speed, for robustness?
-Adding noise to your actions also increases the robustness of your model to steady-state or tracking errors of the robocar controllers for steering and speed in the real world. Since we use discrete action, we need to add noise to their associated mappings in 
-```python
-class DeepRacerRacetrackCustomActionSpaceEnv(DeepRacerRacetrackEnv)
-```
-: (see Lines ~575-579)
-
-### Exercise 12 - Copy custom files to S3 bucket so that Amazon SageMaker and AWS RoboMaker can pick them up
-
-Very important, remember to copy the edited files from 
-```
-./src/ 
-```
-back into S3 where SageMaker and RoboMaker will pick them up..
 
 
 # Train the RL model
 
-### Exercise XX - Notebook Imports
 
-### Exercise XX - Initialize basic parameters
-
-### Exercise XX - Setup S3 bucket
 
 ### Exercise XX - Build and push Docker image
 
