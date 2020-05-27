@@ -124,7 +124,7 @@ You will need the values for the following:
 
 
 
-| ![Open SageMaker Notebook](/images/400workshop/aws-sagemaker-notebooks.svg) | **Section: Workshop Setup.** |
+| ![Open SageMaker Notebook](/images/400workshop/aws-sagemaker-notebooks.png) | **Section: Workshop Setup.** |
 |---|---|
 
 1. Launch a new web browser window and navigate to the SageMaker Notebook Instance by selecting Amazon Sagemaker in the Services drop down in the AWS Console
