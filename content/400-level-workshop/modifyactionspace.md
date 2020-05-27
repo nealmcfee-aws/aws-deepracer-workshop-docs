@@ -51,7 +51,7 @@ The filename of each file specifies the sensors, the neural network, speed, and 
 
 ### Create your own action space artifact file by following this json format.
 
-![Image](/images/400workshop/actionspaceexample.png)
+![Image](/images/400workshop/actionspaceexamplesteering.png)
 
 
 ### Save your action space artifact file and move to the next activity.

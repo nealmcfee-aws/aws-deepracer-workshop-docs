@@ -38,7 +38,7 @@ The default action space for our RL agent is discrete, therefore, the number of 
 
 In the action space artifact file there is an entry for neural_network. 
 
-![Image](/images/400workshop/actionspaceexample.png)
+![Image](/images/400workshop/actionspaceexamplenetwork.png)
 
 When updating the neural_network entry take into account the different combinations of sensors and network depth outlined below.
 

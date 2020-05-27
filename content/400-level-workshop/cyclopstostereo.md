@@ -46,7 +46,7 @@ LIDAR is a light detection and ranging sensor. It scans its environment and prov
 
 In the action space artifact file there is an entry for sensor.
 
-![Image](/images/400workshop/actionspaceexample.png)
+![Image](/images/400workshop/actionspaceexamplesensor.png)
 
 For the sensor you have the following choices:
 
