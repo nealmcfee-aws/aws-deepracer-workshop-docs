@@ -122,7 +122,9 @@ You will need the values for the following:
 - S3BucketName
 - Notebook Name
 
-### Launch the Amazon SageMaker Notebook
+---
+
+![go](go.png) **Section: Workshop Setup.**
 
 1. Launch a new web browser window and navigate to the SageMaker Notebook Instance by selecting Amazon Sagemaker in the Services drop down in the AWS Console
 
@@ -132,7 +134,9 @@ You will need the values for the following:
 
 4. Select Open Jupyter or Open JupyterLab.
 
+5. Open the Jupyter Notebook ``400_deepracer_rl.ipynb``
 
+6. Complete the **Section: Workshop Setup** in the notebook.
 
 **Congratulations!** You have completed the setup portion of the workshop.
 

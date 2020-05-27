@@ -52,7 +52,6 @@ def reward_function(params) :
 
     return float(reward)
 ```
-The reward function input parameters (params) are passed in as a dictionary object, specifying a given state (params["x"], params["y"], params["all_wheels_on_track"], params["distance_from_center"], etc.) the agent is in and a given action (params["speed"] and params["steering"]) the agent takes. You manipulate one or more of the input parameters to create a customized reward function most appropriate for your solution.
 
 #### A list of parameters and their definition is located [here](https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-reward-function-input.html?icmpid=docs_deepracer_console)
 
@@ -63,7 +62,6 @@ The reward function input parameters (params) are passed in as a dictionary obje
 Since you are using a Jupyter Notebook in an Amazon SageMaker Notebook Instance you can import modules to create robust reward functions or add functionality to the examples.
 
 ---
-
 
 
 ### move to jupyter notebook and do the save into s3
