@@ -66,7 +66,9 @@ Since you are using a Jupyter Notebook in an Amazon SageMaker Notebook Instance 
 | ![Open SageMaker Notebook](/images/400workshop/aws-sagemaker-notebooks.png) | **Section: Upload the actions and rewards artifact files** |
 |---|---|
 
-1. Copy custom files to Amazon S3 bucket so that Amazon SageMaker and AWS RoboMaker can pick them up.
+1. Return to the Jupyter Notebook ``400_deepracer_rl.ipynb``
+
+2. Complete the **Section: Upload the actions and rewards artifact files** in the notebook.
 
 
 **[Proceed to the next activity](../starttraining/)**
