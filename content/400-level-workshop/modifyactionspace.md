@@ -12,6 +12,9 @@ description: "Explore the possible steering angle and speed combinations and cre
 
 Action space defines the specific actions an agent can take in both the simulator and physical world. While a real vehicle can choose from a continuum of actions, AWS DeepRacer simplifies the agent's decision-making process by reducing that space to a set of discrete actions.
 
+
+{{< youtube w7Ft2ymGmfc >}}
+
 ## Steering angle
 The steering angle determines the range of steering angles in which the front wheels of your agent can turn. For the agent to be able to make bigger turns, set a higher steering angle. However, too high a steering angle can empower the agent to make unnecessarily excessive turns and can cause zig-zagging.
 
