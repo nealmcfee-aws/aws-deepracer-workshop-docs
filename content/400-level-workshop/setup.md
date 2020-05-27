@@ -122,7 +122,7 @@ You will need the values for the following:
 - S3BucketName
 - Notebook Name
 
----
+
 
 | ![Image](/images/400workshop/go.png) | **Section: Workshop Setup.** |
 |---|---|

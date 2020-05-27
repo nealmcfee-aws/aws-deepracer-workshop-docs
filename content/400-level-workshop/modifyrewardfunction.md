@@ -63,9 +63,10 @@ Since you are using a Jupyter Notebook in an Amazon SageMaker Notebook Instance 
 
 ---
 
+| ![Image](/images/400workshop/go.png) | **Section: Upload the actions and rewards artifact files** |
+|---|---|
 
-### move to jupyter notebook and do the save into s3
+1. Copy custom files to Amazon S3 bucket so that Amazon SageMaker and AWS RoboMaker can pick them up.
 
-### Save your reward function artifact file and move to the next activity. 
 
 **[Proceed to the next activity](../starttraining/)**
