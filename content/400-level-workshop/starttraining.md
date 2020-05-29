@@ -34,44 +34,26 @@ If you modify files after the Build and Push Docker image step that you want to 
 
 ---
 
-
-
-
-
 ## Set algorithm metrics for CloudWatch
 
 Next, we define the following algorithm metrics that we want to capture from CloudWatch logs to monitor the training progress. These are algorithm specific parameters and might change for different algorithm. We use Clipped PPO for this example.
 
-
-
-
 ## Train the RL model using the Python SDK Script mode
-
-### Set the algorithm params
 
 We use Clipped PPO (as provided by Coach) as our reinformcent learning algorithm to train our network. 
 To edit the hyperparameters of the Clipped PPO RL agent edit the cell in the Jupyter Notebook.
 
-The hyperparameters that you can modify are 
+The areas to edit are highlighted below.
 
 ![Image](/images/400workshop/hyperparams.png)
-
-
----
-
-**NOTE**
-
-The following hyperparameters are for file references and may cause your code to not work.
-Please refrain from modifications unless in advanced scenarios.
- 
----
-![Image](/images/400workshop/hyperparamsdonotedit.png)
 
 
 | ![Open SageMaker Notebook](/images/400workshop/aws-sagemaker-notebooks.png) | **Section: Train the RL Model** |
 |---|---|
 
+1. Return to the Jupyter Notebook ``400_deepracer_rl.ipynb``
 
+2. Complete the **Section: Train the RL Model** in the notebook.
 
 
 **[Proceed to the next activity](../startrollouts)**
