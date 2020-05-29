@@ -5,7 +5,49 @@ weight: 30
 description: "Train it!"
 ---
 
-### Exercise 9 - Configure the RL algorithm hyperparameters  --- MOVE THIS TO TRAIN RL MODEL
+
+
+# Train the RL model
+
+The training process involves using AWS RoboMaker to emulate driving experiences in the environment, relaying the experiences at fixed intervals to Amazon SageMaker as input to train the deep neural network, and updating the network weights to an S3 location.
+
+## Build and push Docker image
+
+Part of this training process uses a customized Docker image.
+The Dockerfile is located in the Amazon SageMaker Notebook Instance filesystem here:
+
+```DeepRacer_400_Workshop/Dockerfile```
+
+[More information on how Amazon SageMaker creates containers for custom training.](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html)
+
+The type of container whether the training is done via CPU or if the training takes advantage of a GPU is set via the **instance_type** parameter.
+If you selected a GPU instance type then be aware that training may go faster but the cost for a GPU container is higher than CPU.
+
+Another action is code is copied from the ```DeepRacer_400_Workshop/src``` folder in the Amazon SageMaker Notebook Instance to the Docker container.
+
+---
+
+***NOTE*** 
+
+If you modify files after the Build and Push Docker image step that you want to include in the Amazon SageMaker container you must re-run the step.
+
+
+---
+
+
+
+
+
+## Set algorithm metrics for CloudWatch
+
+Next, we define the following algorithm metrics that we want to capture from CloudWatch logs to monitor the training progress. These are algorithm specific parameters and might change for different algorithm. We use Clipped PPO for this example.
+
+
+
+
+## Train the RL model using the Python SDK Script mode
+
+### Set the algorithm params
 
 We use Clipped PPO (as provided by Coach) as our reinformcent learning algorithm to train our network. 
 To edit the hyperparameters of the Clipped PPO RL agent edit the cell in the Jupyter Notebook.
@@ -26,41 +68,9 @@ Please refrain from modifications unless in advanced scenarios.
 ![Image](/images/400workshop/hyperparamsdonotedit.png)
 
 
-# Train the RL model
+| ![Open SageMaker Notebook](/images/400workshop/aws-sagemaker-notebooks.png) | **Section: Train the RL Model** |
+|---|---|
 
-
-
-### Exercise XX - Build and push Docker image
-
-### Exercise XX - Train the RL model using the Python SDK Script mode
-
-Next, we define the following algorithm metrics that we want to capture from cloudwatch logs to monitor the training progress. These are algorithm specific parameters and might change for different algorithm. We use Clipped PPO for this example.
-
-### Exercise XX - Create the Kinesis video stream (optional)
-
-Blurb about KVS
-
-### Exercise XX - Start the AWS RoboMaker job
-
-Blurb about starting the AWS RoboMaker job
-
-### Exercise XX - Create Simulation Application
-
-Blurb about creating the simapp in AWS RoboMaker
-
-### Exercise XX - Upload your customized simulation application to your s3 bucket
-
-The AWS DeepRacer bundle to be used by the AWS RoboMaker service is under 
-```
-build/output.tar.gz
-```
-Next, we need to upload the bundle to our S3 bucket and create an AWS RoboMaker Simulation Application.
-
-
-
-### Exercise XX - Create arn for the AWS RoboMaker simulation application
-
-blurb about the ARN
 
 
 

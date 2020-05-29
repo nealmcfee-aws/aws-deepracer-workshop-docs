@@ -15,6 +15,34 @@ We use horizontal scaling where the neural network model files are synchronized 
 
 `src/markov/training_worker.py`
 
+## Create the Kinesis video stream (optional)
+
+Like the AWS DeepRacer Console Kinesis video streams is used to display the video feed and additional overlay information. If you wish to view the video feed then you can run the 
+
+
+### Exercise XX - Start the AWS RoboMaker job
+
+Blurb about starting the AWS RoboMaker job
+
+### Exercise XX - Create Simulation Application
+
+Blurb about creating the simapp in AWS RoboMaker
+
+### Exercise XX - Upload your customized simulation application to your s3 bucket
+
+The AWS DeepRacer bundle to be used by the AWS RoboMaker service is under 
+```
+build/output.tar.gz
+```
+Next, we need to upload the bundle to our S3 bucket and create an AWS RoboMaker Simulation Application.
+
+
+
+### Exercise XX - Create arn for the AWS RoboMaker simulation application
+
+blurb about the ARN
+
+
 ### Exercise ## - Set preset parameter
 
 ```python
