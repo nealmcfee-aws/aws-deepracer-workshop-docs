@@ -106,10 +106,10 @@ For this section we will focus on **Training**
 
 In the `training_yaml_template.yaml` there are parameters that will set the track and the type of race.
 
-| world_name | image | value
-| Bowtie | ![Bowtie](/images/400workshop/Bowtie_track.png) | Bowtie_track
-| Canada | ![Bowtie](/images/400workshop/Canada_Training.png) | Canada_Training
-| China | ![Bowtie](/images/400workshop/China_track.png) | China_track
+| image | world |
+| ![Bowtie](/images/400workshop/Bowtie_track.png) | world_name = "Bowtie_track" |
+| ![Bowtie](/images/400workshop/Canada_Training.png) | world_name = "Canada_Training" |
+| ![Bowtie](/images/400workshop/China_track.png) | world_name = "China_track" |
 
 #### Set Simulation Job environment variables ####
 #### Create the Simulation Jobs ####
