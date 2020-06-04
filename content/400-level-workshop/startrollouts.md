@@ -15,8 +15,13 @@ We use horizontal scaling where the neural network model files are synchronized 
 
 ## Create the Kinesis video stream (optional)
 
-Like the AWS DeepRacer Console Kinesis video streams is used to display the video feed and additional overlay information. If you wish to view the video feed then you can run the 
+Like the AWS DeepRacer Console Kinesis video streams is used to display the video feed and additional overlay information. If you wish to view the video feed then you can access the media playback in AWS Console.
 
+![Kinesis Video Streams](https://console.aws.amazon.com/kinesisvideo/home?region=us-east-1#/streams)
+
+You should see a near real-time media playback of your agents traversing the track in training and evaluating phases.
+
+![Image](/images/400workshop/kvstraining.png)
 
 ### Start the AWS RoboMaker job
 
