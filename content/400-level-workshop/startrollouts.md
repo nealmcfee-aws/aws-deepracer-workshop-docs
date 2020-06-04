@@ -106,11 +106,32 @@ For this section we will focus on **Training**
 
 In the `training_yaml_template.yaml` there are parameters that will set the track and the type of race.
 
+For this workshop try TIME_TRIAL, OBJECT_AVOIDANCE, HEAD_TO_BOT as the race_type.
+
+Also select the track you wish to use by setting world_name. 
+
+![Rollout params](/images/400workshop/rolloutnotebook.png)
+
+
+
+***Set the world_name using one of the below values*** 
+
 | Track | world_name |
 |---|---|
 |![Bowtie](/images/400workshop/Bowtie_track.png)|world_name = "Bowtie_track"|
-|![Bowtie](/images/400workshop/Canada_Training.png)|world_name = "Canada_Training"|
-|![Bowtie](/images/400workshop/China_track.png)| world_name = "China_track"|
+|![Canada](/images/400workshop/Canada_Training.png)|world_name = "Canada_Training"|
+|![China](/images/400workshop/China_track.png)| world_name = "China_track"|
+|![LGSWide](/images/400workshop/LGSWide.png)| world_name = "LGSWide"|
+|![Mexico](/images/400workshop/Mexico_track.png)| world_name = "Mexico_track"|
+|![New York](/images/400workshop/New_York_Track.png)| world_name = "New_York_Track"|
+|![Oval](/images/400workshop/Oval_track.png)| world_name = "Oval_track"|
+|![ReInvent base](/images/400workshop/reinvent_base.png)| world_name = "reinvent_base"|
+|![ReInvent 2019](/images/400workshop/reInvent2019_track.png)| world_name = "reInvent2019_track"|
+|![ReInvent 2019 Wide](/images/400workshop/reInvent2019_wide.png)| world_name = "reInvent2019_wide"|
+|![Spain](/images/400workshop/Spain_track.png)| world_name = "Spain_track"|
+|![Tokyo](/images/400workshop/Tokyo_Training_track.png)| world_name = "Tokyo_Training_track"|
+
+
 
 #### Set Simulation Job environment variables ####
 #### Create the Simulation Jobs ####
