@@ -11,24 +11,22 @@ We create AWS RoboMaker simulation jobs that simulates the environment and share
 
 ![Image](/images/400workshop/fourrollouts.png)
 
-We use horizontal scaling where the neural network model files are synchronized between the Amazon Sagemaker training job and AWS RoboMaker simulation workers. Model sync behavior is coded in 
-
-`src/markov/training_worker.py`
+We use horizontal scaling where the neural network model files are synchronized between the Amazon Sagemaker training job and AWS RoboMaker simulation workers.
 
 ## Create the Kinesis video stream (optional)
 
 Like the AWS DeepRacer Console Kinesis video streams is used to display the video feed and additional overlay information. If you wish to view the video feed then you can run the 
 
 
-### Exercise XX - Start the AWS RoboMaker job
+### Start the AWS RoboMaker job
 
 Blurb about starting the AWS RoboMaker job
 
-### Exercise XX - Create Simulation Application
+### Create Simulation Application
 
 Blurb about creating the simapp in AWS RoboMaker
 
-### Exercise XX - Upload your customized simulation application to your s3 bucket
+### Upload your customized simulation application to your s3 bucket
 
 The AWS DeepRacer bundle to be used by the AWS RoboMaker service is under 
 ```
@@ -38,12 +36,12 @@ Next, we need to upload the bundle to our S3 bucket and create an AWS RoboMaker 
 
 
 
-### Exercise XX - Create arn for the AWS RoboMaker simulation application
+### Create arn for the AWS RoboMaker simulation application
 
 blurb about the ARN
 
 
-### Exercise ## - Set preset parameter
+### Set preset parameter
 
 ```python
 if graph_manager.agent_params.algorithm.distributed_coach_synchronization_type == 
