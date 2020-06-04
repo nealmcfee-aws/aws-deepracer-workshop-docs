@@ -18,7 +18,7 @@ The Dockerfile is located in the Amazon SageMaker Notebook Instance filesystem h
 
 ```DeepRacer_400_Workshop/Dockerfile```
 
-[More information on how Amazon SageMaker creates containers for custom training.](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html)
+[More information on how Amazon SageMaker creates containers for custom training](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html)
 
 The type of container whether the training is done via CPU or if the training takes advantage of a GPU is set via the **instance_type** parameter.
 If you selected a GPU instance type then be aware that training may go faster but the cost for a GPU container is higher than CPU.

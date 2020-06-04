@@ -13,66 +13,79 @@ We create AWS RoboMaker simulation jobs that simulates the environment and share
 
 We use horizontal scaling where the neural network model files are synchronized between the Amazon Sagemaker training job and AWS RoboMaker simulation workers.
 
-## Create the Kinesis video stream (optional)
+### Create the Kinesis video stream (optional)
 
 Like the AWS DeepRacer Console Kinesis video streams is used to display the video feed and additional overlay information. If you wish to view the video feed then you can access the media playback in AWS Console.
+Performing this step is optional, but it is a great way to view all of your rollouts and their progress.
+If you set multiple rollouts with a value over 1 for the **num_simulation_workers** you will see Kinesis Video Streams cycle through each rollout in the media playback.
 
-![Kinesis Video Streams](https://console.aws.amazon.com/kinesisvideo/home?region=us-east-1#/streams)
+[Kinesis Video Streams](https://console.aws.amazon.com/kinesisvideo/home?region=us-east-1#/streams)
 
-You should see a near real-time media playback of your agents traversing the track in training and evaluating phases.
 
 ![Image](/images/400workshop/kvstraining.png)
 
-### Start the AWS RoboMaker job
+You should see a near real-time media playback of your agents traversing the track in training and evaluating phases.
 
-Blurb about starting the AWS RoboMaker job
+### Create the AWS RoboMaker Simulation Application
 
-### Create Simulation Application
+AWS DeepRacer uses AWS RoboMaker as the simulation engine to train your model using a world created in Gazebo.
+To create this simulation we need to configure AWS RoboMaker by first creating an AWS RoboMaker Simulation Application.
+More information on AWS RoboMaker and [Managing Simulation Applications](https://docs.aws.amazon.com/robomaker/latest/dg/managing-simulation-applications.html)
 
-Blurb about creating the simapp in AWS RoboMaker
-
-### Upload your customized simulation application to your s3 bucket
-
-The AWS DeepRacer bundle to be used by the AWS RoboMaker service is under 
 ```
-build/output.tar.gz
+robomaker_s3_key = 'robomaker/simulation_ws.tar.gz'
+robomaker_source = {'s3Bucket': s3_bucket,
+                    's3Key': robomaker_s3_key,
+                    'architecture': "X86_64"}
+simulation_software_suite={'name': 'Gazebo',
+                           'version': '7'}
+robot_software_suite={'name': 'ROS',
+                      'version': 'Kinetic'}
+rendering_engine={'name': 'OGRE',
+                  'version': '1.x'}
+
 ```
-Next, we need to upload the bundle to our S3 bucket and create an AWS RoboMaker Simulation Application.
+The parameters above outline that we are creating our own AWS RoboMaker Simulation Application using a SimApp bundle located at `robomaker/simulation_ws.tar.gz`
+
+**robomaker_source** sets the S3 bucket location to AWS RoboMaker to look for the SimApp bundle.
+Additionally the architecture is set for "X86_64" which should not be changed for this workshop.
+
+**simulation_software_suite** sets Gazebo as the simulation engine, and version 7 of Gazebo.
+
+**robot_software_suite** sets ROS and ROS version Kinetic which is the first version of ROS.
+
+**rendering_engine** sets the graphical rendering engine, OGRE stands for Object-Oriented Graphics Rendering Engine
+
+[Additional AWS RoboMaker Simulation FAQs](https://aws.amazon.com/robomaker/faqs/#Simulation)
+
+
+### Bundle the AWS RoboMaker Simulation Application
+
+The Simulation Application was downloaded and you expanded the SimApp into the `DeepRacer_400_Workshop/build` folder.
+
+
+### Upload the AWS RoboMaker Simulation Application to an Amazon S3 bucket
 
 
 
-### Create arn for the AWS RoboMaker simulation application
 
-blurb about the ARN
+### Create ARN for the AWS RoboMaker Simulation Application
 
 
-### Set preset parameter
+### Set the AWS RoboMaker Simulation Job parameters and start the training Simulation Jobs
 
-```python
-if graph_manager.agent_params.algorithm.distributed_coach_synchronization_type == 
-            DistributedCoachSynchronizationType.SYNC:
-    graph_manager.save_checkpoint()
-else:
-    graph_manager.occasionally_save_checkpoint()
-```
-To enable sync models to the s3 bucket for multiple rollouts, set the **agent_params.algorithm.distributed_coach_synchronization_type** parameter in
 
-`src/markov/presets/preset.py`
-```python
-agent_params.algorithm.distributed_coach_synchronization_type = DistributedCoachSynchronizationType.SYNC
-```
+### Creating temporary folder top plot metrics
 
-### Exercise XX - Increase number of workers to 2 or more
+### Plot metrics for training job
 
-Specify the number of roll-out workers using the **num_simulation_workers** parameter.
 
-### Exercise XX - Create links to AWS RoboMaker jobs for visualization
+| ![Open SageMaker Notebook](/images/400workshop/aws-sagemaker-notebooks.png) | **Section: Start the AWS Robomaker Simulation** |
+|---|---|
 
-You can visit the RoboMaker console to visualize the simulations or run the following cell to generate the hyperlinks.
+1. Return to the Jupyter Notebook ``400_deepracer_rl.ipynb``
 
-### Exercise XX - Run evaluation in parallel
-
-Blurb about running in parallel
+2. Complete the **Section: Start the AWS Robomaker Simulation** in the notebook.
 
 
 
