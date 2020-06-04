@@ -45,7 +45,7 @@ rendering_engine={'name': 'OGRE',
                   'version': '1.x'}
 
 ```
-The parameters above outline that we are creating our own AWS RoboMaker Simulation Application using a SimApp bundle located at `robomaker/simulation_ws.tar.gz`
+**robomaker_s3_key** sets the location that the AWS RoboMaker Simulation Application will look for the bundled SimApp. `robomaker/simulation_ws.tar.gz`
 
 **robomaker_source** sets the S3 bucket location to AWS RoboMaker to look for the SimApp bundle.
 Additionally the architecture is set for "X86_64" which should not be changed for this workshop.
@@ -62,17 +62,60 @@ Additionally the architecture is set for "X86_64" which should not be changed fo
 ### Bundle the AWS RoboMaker Simulation Application
 
 The Simulation Application was downloaded and you expanded the SimApp into the `DeepRacer_400_Workshop/build` folder.
+If you make changes to any files in the `DeepRacer_400_Workshop/src/markov` folder then you will need to copy those changes to the SimApp so the simulation works with your changes then bundle the SimApp.
 
+If you did not make any changes to files in the `DeepRacer_400_Workshop/src/markov` folder then only bundle the SimApp, copying changes is not required.
 
 ### Upload the AWS RoboMaker Simulation Application to an Amazon S3 bucket
 
-
+After bundling the SimApp locally in your notebook filesystem you need to upload the SimApp to S3.
+The location for upload is set by the **robomaker_s3_key** parameter.
 
 
 ### Create ARN for the AWS RoboMaker Simulation Application
 
+Using boto3.client("robomaker"), create the Amazon Resource Name which will return an ARN for use in creating AWS RoboMaker Simulation Jobs.
+This ARN is used as a reference to which Simulation Application the rollouts will use. 
 
 ### Set the AWS RoboMaker Simulation Job parameters and start the training Simulation Jobs
+
+This task contains multiple steps to set Simulation parameters and start the training Simulation jobs.
+
+#### Set SimApp Parameters ####
+
+Since the Simulation Application contains multiple tracks and multiple race types there is a need to tell the SimApp which to run in the Simulation Job. 
+
+Like the Action Space and Reward Function artifact file templates there are example SimApp configuration files available for you to review.
+
+The files are located in the `DeepRacer_400_Workshop/src/artifacts/yaml` folder.
+There are four files:
+
+**Evaluation**
+`DeepRacer_400_Workshop/src/artifacts/yaml/evaluation_yaml_template.yaml`
+
+**Head to Head**
+`DeepRacer_400_Workshop/src/artifacts/yaml/head2head_yaml_template.yaml`
+
+**Tournament**
+`DeepRacer_400_Workshop/src/artifacts/yaml/tournament_yaml_template.yaml`
+
+**Training**
+`DeepRacer_400_Workshop/src/artifacts/yaml/training_yaml_template.yaml`
+
+For this section we will focus on **Training**
+
+In the `training_yaml_template.yaml` there are parameters that will set the track and the type of race.
+
+| world_name | image | value
+| Bowtie | ![Bowtie](/images/400workshop/Bowtie_track.png) | Bowtie_track
+| Canada | ![Bowtie](/images/400workshop/Canada_Training.png) | Canada_Training
+| China | ![Bowtie](/images/400workshop/China_track.png) | China_track
+
+#### Set Simulation Job environment variables ####
+#### Create the Simulation Jobs ####
+
+
+
 
 
 ### Creating temporary folder top plot metrics
