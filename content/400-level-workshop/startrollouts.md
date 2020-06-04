@@ -106,9 +106,9 @@ For this section we will focus on **Training**
 
 In the `training_yaml_template.yaml` there are parameters that will set the track and the type of race.
 
-For this workshop try TIME_TRIAL, OBJECT_AVOIDANCE, HEAD_TO_BOT as the race_type.
+For this workshop try TIME_TRIAL, OBJECT_AVOIDANCE, HEAD_TO_BOT as the **race_type**.
 
-Also select the track you wish to use by setting world_name. 
+Also select the track you wish to use by setting **world_name**. 
 
 ![Rollout params](/images/400workshop/rolloutnotebook.png)
 
@@ -131,18 +131,78 @@ Also select the track you wish to use by setting world_name.
 |![Spain](/images/400workshop/Spain_track.png)| world_name = "Spain_track"|
 |![Tokyo](/images/400workshop/Tokyo_Training_track.png)| world_name = "Tokyo_Training_track"|
 
+After setting the values in the notebook a new file will be created called `training_params.yaml`
+This file will be uploaded to Amazon S3 for the SimApp to use when creating the simulation.
 
 
 #### Set Simulation Job environment variables ####
+
+Additional variables need to be set for the Simulation Job.
+
+**vpcConfig** is needed so AWS RoboMaker can communicate with Amazon SageMaker.
+This variable is set earlier in the notebook and the VPC is created in the setup portion of this workshop.
+
+**envriron_vars** is a series of variables that are created for the Simulation Job to use at run-time.
+The AWS DeepRacer SimApp uses these variables for internal functions.
+
+**simulation_application** this sets the framework for the Simulation Job, it sets the Simulation Application that the Simulation Job is based on and the launch configuration. 
+
+---
+
+**Note**
+
+Defaults are ok as all variables are set from previous cells in the notebook.
+
+---
+
+
 #### Create the Simulation Jobs ####
 
+Earlier in the notebook you set the variable **num_simulation_workers**
+Using this variable a loop is created that traverses a for in statement.
+If you set **num_simulation_workers** > 1 then the loop will create the set number of Simulation Jobs.
 
+```python
+responses = []
+for job_no in range(num_simulation_workers):
+    client_request_token = strftime("%Y-%m-%d-%H-%M-%S", gmtime())
+    envriron_vars = {
+        "S3_YAML_NAME": s3_yaml_name,
+        "SAGEMAKER_SHARED_S3_PREFIX": s3_prefix,
+        "SAGEMAKER_SHARED_S3_BUCKET": s3_bucket,
+        "WORLD_NAME": world_name,
+        "KINESIS_VIDEO_STREAM_NAME": kvs_stream_name,
+        "APP_REGION": aws_region,
+        "MODEL_METADATA_FILE_S3_KEY": "%s/model/model_metadata.json" % s3_prefix,
+        "ROLLOUT_IDX": str(job_no)
+    }
 
+    simulation_application = {"application":simulation_app_arn,
+                              "launchConfig": {"packageName": "deepracer_simulation_environment",
+                                               "launchFile": "distributed_training.launch",
+                                               "environmentVariables": envriron_vars}
+                             }
+    response =  robomaker.create_simulation_job(iamRole=sagemaker_role,
+                                            clientRequestToken=client_request_token,
+                                            maxJobDurationInSeconds=job_duration_in_seconds,
+                                            failureBehavior="Fail",
+                                            simulationApplications=[simulation_application],
+                                            vpcConfig=vpcConfig
+                                            )
+    responses.append(response)
+    time.sleep(5)
 
+```
 
-### Creating temporary folder top plot metrics
 
 ### Plot metrics for training job
+
+Once the AWS RoboMaker Simulation Jobs are running and Amazon SageMaker training jobs are running you will be able to plot the metrics for training rewards.
+
+The logs that the plotting function use the file training_metrics.json that is uploaded to Amazon S3.
+
+
+
 
 
 | ![Open SageMaker Notebook](/images/400workshop/aws-sagemaker-notebooks.png) | **Section: Start the AWS Robomaker Simulation** |
