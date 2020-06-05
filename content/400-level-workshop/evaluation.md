@@ -29,7 +29,7 @@ There are additional parameters that you can change to customize the Kinetic Vid
 |---|---|
 | yaml_config['NUMBER_OF_TRIALS'] | Set the number of laps for evaluation |
 | yaml_config['DISPLAY_NAME'] | Displayed in the upper left corner to identify the current racer|
-| yaml_config['LEADERBOARD_TYPE'] | **Leave as ""**|
+| yaml_config['LEADERBOARD_TYPE'] | **Leave as "LEAGUE"**|
 |yaml_config['LEADERBOARD_NAME'] | Displayed on the bottom area of the media output|
 |yaml_config['CAR_COLOR']| Controls the color of the racecar|
 |yaml_config['NUMBER_OF_RESETS']| The number of resets allowed per lap|
