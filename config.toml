@@ -12,7 +12,7 @@ relativeURLs = true
 hrefTargetBlank = true
 
 [params]
-editURL = "https://github.com/jerwallace/aws-robomaker-workshops/edit/master/content/"
+editURL = "https://github.com/nealmcfee-aws/aws-deepracer-workshop-docs/edit/master/content/"
 themeVariant = "deepracer"
 showVisitedLinks = false
 author = ""
@@ -22,7 +22,7 @@ disableAssetsBusting = false
 disableLanguageSwitchingButton = true
 disableShortcutsTitle=false
 disableInlineCopyToClipBoard = true
-ghrepo = "https://github.com/jerwallace/aws-robomaker-workshops/"
+ghrepo = "https://github.com/nealmcfee-aws/aws-deepracer-workshop-docs/"
 branch = "master"
 template_bucket = "neuralmotors.com"
 
@@ -50,7 +50,7 @@ weight = 20
 
 [[menu.shortcuts]]
 name = "<i class='fab fa-github'></i> GitHub Project"
-url = "https://github.com/mcfeenea/changeme"
+url = "https://github.com/nealmcfee-aws/aws-deepracer-workshop-docs"
 weight = 30
 
 [[menu.shortcuts]]
