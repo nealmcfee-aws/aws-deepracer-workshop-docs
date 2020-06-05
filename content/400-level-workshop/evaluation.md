@@ -23,35 +23,21 @@ There are additional parameters that you can change to customize the Kinetic Vid
 
 [Kinesis Video Streams](https://console.aws.amazon.com/kinesisvideo/home?region=us-east-1#/streams)
 
-| yaml_config['NUMBER_OF_TRIALS'] | Set the number of laps for evaluation |
-|---|---|
-
-| yaml_config['DISPLAY_NAME'] | Displayed in the upper left corner to identify the current racer|
-|---|---|
-
-| yaml_config['LEADERBOARD_TYPE'] | **Leave as ""**|
-|---|---|
-
-|yaml_config['LEADERBOARD_NAME'] | Displayed on the bottom area of the media output|
-|---|---|
-
-|yaml_config['CAR_COLOR']| Controls the color of the racecar|
-|---|---|
-
-|yaml_config['NUMBER_OF_RESETS']| The number of resets allowed per lap|
-|---|---|
-
-|yaml_config['PENALTY_SECONDS']| **Leave as "5"** |
-|---|---|
-
-|yaml_config['OFF_TRACK_PENALTY']| Number of seconds to add to the race time when the race car leaves the track|
-|---|---|
-
-|yaml_config['COLLISION_PENALTY']| Number of seconds to add to the race time when the race car collides with an obstacle like a box in the OBJECT_AVOIDANCE race type|
-|---|---|
-
-
 ![Evaluation YAML](/images/400workshop/evalyaml.png)
+
+| key | value |
+|---|---|
+| yaml_config['NUMBER_OF_TRIALS'] | Set the number of laps for evaluation |
+| yaml_config['DISPLAY_NAME'] | Displayed in the upper left corner to identify the current racer|
+| yaml_config['LEADERBOARD_TYPE'] | **Leave as ""**|
+|yaml_config['LEADERBOARD_NAME'] | Displayed on the bottom area of the media output|
+|yaml_config['CAR_COLOR']| Controls the color of the racecar|
+|yaml_config['NUMBER_OF_RESETS']| The number of resets allowed per lap|
+|yaml_config['PENALTY_SECONDS']| **Leave as "5"** |
+|yaml_config['OFF_TRACK_PENALTY']| Number of seconds to add to the race time when the race car leaves the track|
+|yaml_config['COLLISION_PENALTY']| Number of seconds to add to the race time when the race car collides with an obstacle like a box in the OBJECT_AVOIDANCE race type|
+
+
 
 Below is an example of the evaluation job media output using the parameters set in the notebook
 
