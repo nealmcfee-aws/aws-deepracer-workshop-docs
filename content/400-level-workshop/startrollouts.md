@@ -201,7 +201,7 @@ Once the AWS RoboMaker Simulation Jobs are running and Amazon SageMaker training
 
 The logs that the plotting function use the file training_metrics.json that is uploaded to Amazon S3.
 
-
+![Plot metrics](/images/400workshop/rewardgraph.png)
 
 
 
