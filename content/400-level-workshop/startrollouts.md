@@ -202,7 +202,7 @@ for job_no in range(num_simulation_workers):
 ```
 
 
-### Plot metrics for training job
+### Plot metrics for training job ###
 
 Once the AWS RoboMaker Simulation Jobs are running and Amazon SageMaker training jobs are running you will be able to plot the metrics for training rewards.
 
@@ -216,12 +216,12 @@ As time goes on you can re-run the notebook cell to update the plot with the new
 
 
 
-| ![Open SageMaker Notebook](/images/400workshop/aws-sagemaker-notebooks.png) | **Section: Start the AWS Robomaker Simulation** |
+| ![Open SageMaker Notebook](/images/400workshop/aws-sagemaker-notebooks.png) | **Section: Start the AWS Robomaker Simulation for Model Training** |
 |---|---|
 
 1. Return to the Jupyter Notebook ``400_deepracer_rl.ipynb``
 
-2. Complete the **Section: Start the AWS Robomaker Simulation** in the notebook.
+2. Complete the **Section: Start the AWS Robomaker Simulation for Model Training** in the notebook.
 
 
 
