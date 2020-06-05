@@ -96,8 +96,8 @@ Like the Action Space and Reward Function artifact file templates there are exam
 The files are located in the `DeepRacer_400_Workshop/src/artifacts/yaml` folder.
 There are four files:
 
-**Evaluation**
-`DeepRacer_400_Workshop/src/artifacts/yaml/evaluation_yaml_template.yaml`
+**Training**
+`DeepRacer_400_Workshop/src/artifacts/yaml/training_yaml_template.yaml`
 
 **Head to Head**
 `DeepRacer_400_Workshop/src/artifacts/yaml/head2head_yaml_template.yaml`
@@ -105,8 +105,9 @@ There are four files:
 **Tournament**
 `DeepRacer_400_Workshop/src/artifacts/yaml/tournament_yaml_template.yaml`
 
-**Training**
-`DeepRacer_400_Workshop/src/artifacts/yaml/training_yaml_template.yaml`
+**Evaluation**
+`DeepRacer_400_Workshop/src/artifacts/yaml/evaluation_yaml_template.yaml`
+
 
 For this section we will focus on **Training**
 
@@ -208,6 +209,10 @@ Once the AWS RoboMaker Simulation Jobs are running and Amazon SageMaker training
 The logs that the plotting function use the file training_metrics.json that is uploaded to Amazon S3.
 
 ![Plot metrics](/images/400workshop/rewardgraph.png)
+
+As time goes on you can re-run the notebook cell to update the plot with the new training rewards.
+
+![Plot metrics](/images/400workshop/rewardgraphupdated.png)
 
 
 
