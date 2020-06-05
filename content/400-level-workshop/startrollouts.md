@@ -22,9 +22,12 @@ If you set multiple rollouts with a value over 1 for the **num_simulation_worker
 [Kinesis Video Streams](https://console.aws.amazon.com/kinesisvideo/home?region=us-east-1#/streams)
 
 
-| ![Bowtie](/images/400workshop/rollout1.png) | ![Bowtie](/images/400workshop/rollout2.png) |
+| ![Rollout 1](/images/400workshop/rollout1.png) | ![Rollout 2](/images/400workshop/rollout2.png) |
 |---|---|
-|![Bowtie](/images/400workshop/rollout3.png)|![Bowtie](/images/400workshop/rollout4.png)|
+
+
+
+|![Rollout 3](/images/400workshop/rollout3.png)|![Rollout 4](/images/400workshop/rollout4.png)|
 |---|---|
 
 You should see a near real-time media playback of your agents traversing the track in training and evaluating phases.
