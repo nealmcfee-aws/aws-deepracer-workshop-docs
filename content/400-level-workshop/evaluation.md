@@ -9,7 +9,7 @@ description: ""
 
 After training your model using multiple rollouts you can evaluate the current state of the training by using an evaluation simulation. 
 When evaluating your model only a single AWS RoboMaker Simulation Job will be created as opposed to multiple Simulation Jobs if you created multiple rollouts.
-Additionally, you have the opportunity to add customized labels to the media overlay for the simulation.
+Additionally, you have the opportunity to add custom labels to the media overlay for the simulation.
 
 ### Set the AWS RoboMaker Simulation Job parameters and start the evaluation Simulation Job
 
@@ -25,22 +25,31 @@ There are additional parameters that you can change to customize the Kinetic Vid
 
 | yaml_config['NUMBER_OF_TRIALS'] | Set the number of laps for evaluation |
 |---|---|
+
 | yaml_config['DISPLAY_NAME'] | Displayed in the upper left corner to identify the current racer|
 |---|---|
+
 | yaml_config['LEADERBOARD_TYPE'] | **Leave as ""**|
 |---|---|
+
 |yaml_config['LEADERBOARD_NAME'] | Displayed on the bottom area of the media output|
 |---|---|
+
 |yaml_config['CAR_COLOR']| Controls the color of the racecar|
 |---|---|
+
 |yaml_config['NUMBER_OF_RESETS']| The number of resets allowed per lap|
 |---|---|
+
 |yaml_config['PENALTY_SECONDS']| **Leave as "5"** |
 |---|---|
+
 |yaml_config['OFF_TRACK_PENALTY']| Number of seconds to add to the race time when the race car leaves the track|
 |---|---|
+
 |yaml_config['COLLISION_PENALTY']| Number of seconds to add to the race time when the race car collides with an obstacle like a box in the OBJECT_AVOIDANCE race type|
 |---|---|
+
 
 ![Evaluation YAML](/images/400workshop/evalyaml.png)
 
