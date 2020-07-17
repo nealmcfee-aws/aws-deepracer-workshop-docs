@@ -7,8 +7,8 @@ disableToc: true
 
 |   |   |   |
 |---|---|---|
-|![Neal](/images/400workshop/neal.jpg)|Neal McFee| mcfeenea@amazon.com
-|![Sahika](/images/400workshop/sahika.jpg)|Sahika Genc| sahika@amazon.com
+|![Neal](/images/400workshop/neal.jpeg)|Neal McFee| mcfeenea@amazon.com
+|![Sahika](/images/400workshop/sahika.jpeg)|Sahika Genc| sahika@amazon.com
 
 
 <!---
