@@ -5,10 +5,10 @@ disableToc: true
 
 ### Thanks to our wonderful contributors!
 
-Neal McFee
-Sahika Genc
-Muralidhara, Sunil
-
+|   |   |   |
+|---|---|---|
+|![Neal](/images/400workshop/neal.jpg)|Neal McFee| mcfeenea@amazon.com
+|![Sahika](/images/400workshop/sahika.jpg)|Sahika Genc| sahika@amazon.com
 
 
 <!---
