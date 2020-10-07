@@ -39,7 +39,7 @@ AWS CloudFormation provides a common language to describe and provision infrastr
 
 Once you have successfully signed into the AWS console, click the button below to launch a CloudFormation stack to create the required resources:
 
-[![Launch Stack](../../images/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://neurips-aido3-awsdeepracer.s3.amazonaws.com/drnotebookeast1.json&region=us-east-1)
+[![Launch Stack](../../images/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://temp-400-dr-workshop.s3.us-east-1.amazonaws.com/drnotebookeast1.json&region=us-east-1)
 
 
 1. On the *Create stack* page, accept the defaults and click **Next**.
@@ -105,7 +105,7 @@ AWS CloudFormation provides a common language to describe and provision infrastr
 
 Once you have successfully changed the AWS Region to US East (N. Virginia), click the button below to launch a CloudFormation stack to create the required resources.
 
-[![Launch Stack](../../images/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://neurips-aido3-awsdeepracer.s3.amazonaws.com/drnotebookeast1.json&region=us-east-1)
+[![Launch Stack](../../images/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://temp-400-dr-workshop.s3.us-east-1.amazonaws.com/drnotebookeast1.json&region=us-east-1)
 
 1. On the *Create stack* page, accept the defaults and click **Next**.
 2. On the *Specify stack details* page, set *Stack name* to a value that will help you identify this stack, such as "deepracer-wrkshp-resources".
